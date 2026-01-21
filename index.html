@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Info -->
+    <title>Denys Kibalenko - Portfolio</title>
+    <meta name="description" content="Denys Kibalenko - Python Developer specializing in building robust RESTful APIs with Django and FastAPI, designing scalable backend architectures, and optimizing PostgreSQL databases. Strong foundation in OOP, SOLID principles, concurrency, and asynchronous programming. Experienced with Docker, AWS, and Linux environments. Known for fast learning, problem-solving, and effective collaboration in international teams.">
+    <meta name="author" content="Denys Kibalenko">
+
+    <!-- Open Graph Tags: The title of the page for social media sharing. It can match the title tag or be more descriptive. -->
+    <meta property="og:title" content="Denys Kibalenko">
+
+    <!-- Open Graph Tags: Typically set to "website" for static sites or "article" for content-heavy pages. -->
+    <meta property="og:type" content="website">
+
+    <!-- Open Graph Tags: The URL of the page, used to ensure link previews resolve to the correct page. -->
+    <meta property="og:url" content="127.0.0.1:5500/index.html">
+
+    <!-- Open Graph Tags: URL of an image that represents the page. Useful for link previews. -->
+    <meta property="og:image" content="127.0.0.1:5500/">
+
+    <!-- Open Graph Tags: Provides an alternative text for the image to improve accessibility. -->
+    <meta property="og:image:alt" content="Denys Kibalenko Profile Image">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/modern_normalize.css" />
+    <link rel="stylesheet" href="css/html5bp.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Set a theme color that matches your website's primary color -->
+    <meta name="theme-color" content="#fafafa">
+
+    <!-- Favicon for all browsers -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+
+    <!-- Apple touch icon for iOS devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
+
+    <!-- Web app manifest for Progressive Web Apps -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Content Security Policy: Uncomment to enhance security by restricting where content can be loaded from (useful for preventing certain attacks like XSS). Update if adding external sources (e.g., Google Fonts, Bootstrap CDN, analytics, etc). -->
+    <!-- <meta http-equiv="Content-Security-Policy" content=" default-src 'self'; script-src 'self' code.jquery.com; style-src 'self' fonts.googleapis.com; font-src fonts.gstatic.com; img-src 'self' images.examplecdn.com; "> -->
+  </head>
+
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <div class="header-top flex-responsive">
+          
+          <div class="header-info">
+            <h1>Denys Kibalenko</h1>
+            <h2 class="header-label">Python Developer</h2>
+            
+              <address>
+                <ul class="inline-list flex-responsive">
+                  
+                    <li>
+                      <a href="mailto:denyskibalenko@gmail.com">denyskibalenko@gmail.com</a>
+                    </li>
+                  
+                  
+                    
+                      <li>
+                        <a href="tel:+420773875079">+420773875079</a>
+                      </li>
+                    
+                      <li>
+                        <a href="tel:+380660041381">+380660041381</a>
+                      </li>
+                    
+                  
+                  <li>Prague, Czechia / Remote</li>
+                </ul>
+              </address>
+            
+            
+              <ul class="inline-list flex-responsive">
+                
+                  <li>
+                    <a href="https://www.linkedin.com/in/denys-kibalenko-066396226/"
+                       rel="noopener noreferrer"
+                       aria-label="LinkedIn"
+                       class="link-with-icon">
+                      <svg aria-hidden="true"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     width="16"
+     height="16"
+     fill="currentColor"
+     class="bi bi-linkedin"
+     viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+</svg>
+
+                      LinkedIn
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://github.com/dkibalenko"
+                       rel="noopener noreferrer"
+                       aria-label="GitHub"
+                       class="link-with-icon">
+                      <svg aria-hidden="true"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     width="16"
+     height="16"
+     fill="currentColor"
+     class="bi bi-github"
+     viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+</svg>
+
+                      GitHub
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="http://t.me/denniewise"
+                       rel="noopener noreferrer"
+                       aria-label="Telegram"
+                       class="link-with-icon">
+                      <svg aria-hidden="true"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     width="16"
+     height="16"
+     viewBox="0 0 16 16"
+     fill="currentColor">
+  <path d="M15.93 2.2c-.2-.52-.74-.82-1.3-.67L1.4 5.2c-.55.15-.9.67-.8 1.22.1.55.6.93 1.16.9l3.6-.2c.2 0 .4.1.5.3l1.3 3.9c.17.5.67.8 1.2.8h.1c.55-.04 1-.4 1.1-.93l2.5-10c.1-.2.1-.4 0-.6z"/>
+</svg>
+
+                      Telegram
+                    </a>
+                  </li>
+                
+              </ul>
+            
+            <p class="header-summary">Python Developer specializing in building robust RESTful APIs with Django and FastAPI, designing scalable backend architectures, and optimizing PostgreSQL databases. Strong foundation in OOP, SOLID principles, concurrency, and asynchronous programming. Experienced with Docker, AWS, and Linux environments. Known for fast learning, problem-solving, and effective collaboration in international teams.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="container">
+        <main>
+          
+            <section>
+              <h2 class="section-heading">Work Experience</h2>
+              
+                <section>
+                  <h3>
+                    
+                      Freelance Python Developer
+                    
+                  </h3>
+                  
+                    <p class="section-label">03/2025 - Present</p>
+                  
+                  <p>Developing a scalable RESTful API backend for a multi-tenant CRM platform using Django REST Framework</p>
+                  
+                    <ul>
+                      <li>Designed and enforced accountsubscription plan logic across all core entities</li><li>Built ownership and account-scoping enforcement to enable tenant isolation and cross-account access control</li><li>Extended DRF viewsets with custom actions and business-critical workflows</li><li>Developed analytics logic, including aggregated metrics and performant query patterns</li><li>Designed relational SQL data models and optimized PostgreSQL queries for performance</li><li>Containerized backend services using Docker, enabling reproducible development environments</li>
+                    </ul>
+                  
+                </section>
+              
+                <section>
+                  <h3>
+                    
+                      Freelance Python Developer
+                    
+                  </h3>
+                  
+                    <p class="section-label">12/2023 - 2025</p>
+                  
+                  <p>Developing backend systems, RESTful APIs, and database-driven applications using Django, FastAPI, and PostgreSQL. Delivering production-ready solutions with clean architecture, SOLID principles, and modern Python tooling.</p>
+                  
+                    <ul>
+                      <li>Designed and implemented RESTful APIs using Django REST Framework and FastAPI</li><li>Built scalable backend logic using OOP, SOLID principles, and design patterns</li><li>Optimized SQL queries and database schemas using PostgreSQL, Django ORM, and SQLAlchemy</li><li>Containerized applications with Docker for development and deployment</li><li>Managed version control using Git and GitHub</li><li>Deployed applications on Render and AWS (IAM, S3, RDS)</li>
+                    </ul>
+                  
+                </section>
+              
+                <section>
+                  <h3>
+                    
+                      Chief Officer - Shipping Industry
+                    
+                  </h3>
+                  
+                    <p class="section-label">03/2009 - 05/2023</p>
+                  
+                  <p>Senior maritime officer responsible for cargo operations, vessel stability, navigation, and safety management aboard international cargo vessels.</p>
+                  
+                    <ul>
+                      <li>Oversaw cargo and ballast operations ensuring vessel safety and efficiency</li><li>Managed ship stability, hull strength, and cargo distribution</li><li>Performed marine navigation using ECDIS, ARPA, and advanced maritime systems</li><li>Led international teams and coordinated operational workflows</li>
+                    </ul>
+                  
+                </section>
+              
+            </section>
+          
+
+          
+            <section>
+              <h2 class="section-heading">Projects</h2>
+              
+                <section>
+                  <h3>
+                    
+                      <a href="https://github.com/dkibalenko/theatre-api-service-mate/tree/main">Theatre API Service</a>
+                    
+                  </h3>
+                  <p>An API service for theatre management built with Django REST Framework, supporting shows, performances, bookings, and user roles.</p>
+                  
+                    <ul>
+                      <li>Built a fully authenticated REST API using JWT tokens, custom email-based login, and role-based access control</li><li>Designed a relational data model with complex FK/M2M relationships, validation rules, and database-level constraints to ensure data integrity (e.g., unique seat reservations per performance)</li><li>Implemented advanced business logic including automatic seat availability calculation, multi-layer ticket validation, and user-bound reservation creation</li><li>Developed a scalable API layer with DRF ViewSets, nested serializers, and optimized queries using select_related / prefetch_related to eliminate N+1 issues</li><li>Containerized the entire environment with Docker + Postgres + PgAdmin</li><li>Added JWT token blacklisting with automated cleanup via Celery, Celery Beat, Redis</li>
+                    </ul>
+                  
+                  
+                    <div class="gallery main-gallery">
+                      
+                        <figure>
+                          <a href="img/project_theatre/Theatre 1 Celery Run.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_theatre/Theatre 1 Celery Run.webp" alt="Celery Run">
+                          </a>
+                          <figcaption>Celery Run</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_theatre/Theatre 2 PgAdmin.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_theatre/Theatre 2 PgAdmin.webp" alt="PgAdmin">
+                          </a>
+                          <figcaption>PgAdmin</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_theatre/Theatre 3 API.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_theatre/Theatre 3 API.webp" alt="API Theatre">
+                          </a>
+                          <figcaption>API Theatre</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_theatre/Theatre 4 API.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_theatre/Theatre 4 API.webp" alt="API User">
+                          </a>
+                          <figcaption>API User</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_theatre/Theatre 5 API Login.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_theatre/Theatre 5 API Login.webp" alt="API Login">
+                          </a>
+                          <figcaption>API Login</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_theatre/Theatre 7 API Actor list.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_theatre/Theatre 7 API Actor list.webp" alt="API Actor List">
+                          </a>
+                          <figcaption>API Actor List</figcaption>
+                        </figure>
+                      
+                    </div>
+                  
+                </section>
+              
+                <section>
+                  <h3>
+                    
+                      <a href="https://github.com/dkibalenko/restaurant-mate">Restaurant Kitchen Management Service</a>
+                    
+                  </h3>
+                  <p>A Django-based backend system representing a restaurant kitchen workflow, including staff management, dish preparation, and cook assignment to dishes.</p>
+                  
+                    <ul>
+                      <li>Built a Django application with a custom user model and automatic slug generation for clean URLs</li><li>Implemented CRUD workflows for dishes, ingredients, dish types, and cooks, including image uploads and validation</li><li>Designed a dynamic assignment system allowing cooks to be added/removed from dishes via a toggle action.</li><li>Added search, filtering, and pagination across all major list views for efficient data navigation.</li><li>Enhanced UX with custom middleware, optimized queries using prefetch_related, and persistent query parameters</li>
+                    </ul>
+                  
+                  
+                    <div class="gallery main-gallery">
+                      
+                        <figure>
+                          <a href="img/project_restaurant/Restaurant 1 Login.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_restaurant/Restaurant 1 Login.webp" alt="Login Page">
+                          </a>
+                          <figcaption>Login Page</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_restaurant/Restaurant 2 Index.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_restaurant/Restaurant 2 Index.webp" alt="Dashboard">
+                          </a>
+                          <figcaption>Dashboard</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_restaurant/Restaurant 3 Cook list.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_restaurant/Restaurant 3 Cook list.webp" alt="Cooks">
+                          </a>
+                          <figcaption>Cooks</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_restaurant/Restaurant 4 Cook Detail.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_restaurant/Restaurant 4 Cook Detail.webp" alt="Cook Detail">
+                          </a>
+                          <figcaption>Cook Detail</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_restaurant/Restaurant 6 Dish list.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_restaurant/Restaurant 6 Dish list.webp" alt="Dish List">
+                          </a>
+                          <figcaption>Dish List</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_restaurant/Restaurant 7 Dish Detail.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_restaurant/Restaurant 7 Dish Detail.webp" alt="Dish Detail">
+                          </a>
+                          <figcaption>Dish Detail</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_restaurant/Restaurant 8 Dish Create.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_restaurant/Restaurant 8 Dish Create.webp" alt="Dish Create">
+                          </a>
+                          <figcaption>Dish Create</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_restaurant/Restaurant 9 Cook Create.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_restaurant/Restaurant 9 Cook Create.webp" alt="Cook Create">
+                          </a>
+                          <figcaption>Cook Create</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <a href="img/project_restaurant/Restaurant 12 Logout.webp" target="_blank">
+                            <img width="600" height="338" src="img/project_restaurant/Restaurant 12 Logout.webp" alt="Logout Page">
+                          </a>
+                          <figcaption>Logout Page</figcaption>
+                        </figure>
+                      
+                    </div>
+                  
+                </section>
+              
+            </section>
+          
+
+          
+        </main>
+
+        <!-- Sidebar Section -->
+        <aside>
+          
+            <section>
+              <h2 class="section-heading">Education</h2>
+              
+                <section>
+                  <h3>
+                    
+                      <a href="https://mate.academy/en/">Mate Academy</a>
+                    
+                  </h3>
+                  <p class="section-label">Kyiv, Ukraine</p>
+                  
+                    <h4>Degrees</h4>
+                    <ul>
+                      <li>Python Developer</li>
+                    </ul>
+                  
+                  
+                    <p class="section-label">Graduation: 2025</p>
+                  
+                </section>
+              
+                <section>
+                  <h3>
+                    
+                      <a href="https://ksma.ks.ua/?page_id=284&amp;lang=en">Kherson State Maritime Academy</a>
+                    
+                  </h3>
+                  <p class="section-label">Kherson, Ukraine</p>
+                  
+                    <h4>Degrees</h4>
+                    <ul>
+                      <li>Specialist of Navigation and Seagoing Vessels Handling</li>
+                    </ul>
+                  
+                  
+                    <p class="section-label">Graduation: 2010</p>
+                  
+                </section>
+              
+            </section>
+          
+
+          
+            <section>
+              <h2 class="section-heading">Skills</h2>
+              <ul class="unstyled-list">
+                
+                  <li>
+                    <h3>Python (Concurrency &amp; Parallelism)</h3>
+                  </li>
+                
+                  <li>
+                    <h3>Django / Django REST / Django ORM</h3>
+                  </li>
+                
+                  <li>
+                    <h3>FastAPI / Pydantic</h3>
+                  </li>
+                
+                  <li>
+                    <h3>SQL / PostgreSQL / Query Optimization</h3>
+                  </li>
+                
+                  <li>
+                    <h3>SQLAlchemy</h3>
+                  </li>
+                
+                  <li>
+                    <h3>Docker</h3>
+                  </li>
+                
+                  <li>
+                    <h3>Linux</h3>
+                  </li>
+                
+                  <li>
+                    <h3>AWS (IAM, S3, RDS)</h3>
+                  </li>
+                
+                  <li>
+                    <h3>Git / GitHub</h3>
+                  </li>
+                
+                  <li>
+                    <h3>Algorithms &amp; Data Structures</h3>
+                  </li>
+                
+              </ul>
+            </section>
+          
+
+          
+            <section>
+              <h2 class="section-heading">Additional Education</h2>
+              <ul>
+                
+                  <li>
+                    
+                      <a href="https://drive.google.com/file/d/1UgDbtbt7HbdMJofbn9LC_z7hf_A_HuvF/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        Udemy - Python 3: Deep Dive (Functional)
+                      </a>
+                    
+                  </li>
+                
+                  <li>
+                    
+                      <a href="https://drive.google.com/file/d/1ZyOJk-6AhN1JcE_R9pTE9gWxPDjbVbW6/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        Udemy - Python 3: Deep Dive (Iterators, Generators)
+                      </a>
+                    
+                  </li>
+                
+                  <li>
+                    
+                      <a href="https://drive.google.com/file/d/1I7eZiVHKN_kW7rwCbrUl4F5tfkQ_4aYm/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        Udemy - Python Django - The Practical Guide
+                      </a>
+                    
+                  </li>
+                
+                  <li>
+                    
+                      <a href="https://drive.google.com/file/d/1yCjMgeFHU8XiFzk8PgB8OCtEP4j6s00T/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        Udemy - The Complete SQL Bootcamp
+                      </a>
+                    
+                  </li>
+                
+                  <li>
+                    
+                      <a href="https://www.linkedin.com/learning/certificates/efccc317714a00e5a501b66b2c7c85e9906a6761d6cd8fde21b989db6a3c77a5" target="_blank" rel="noopener noreferrer">
+                        LinkedIn Learning - DevOps Foundations
+                      </a>
+                    
+                  </li>
+                
+              </ul>
+            </section>
+          
+
+          
+            <section>
+              <h2 class="section-heading">Achievements</h2>
+              <ul class="unstyled-list">
+                
+                  <li>School athletic competitions</li>
+                
+                  <li>Football championship winner</li>
+                
+                  <li>Municipal junior football team</li>
+                
+                  <li>Typing speed ~60 WPM</li>
+                
+                  <li>18 years of international team experience</li>
+                
+              </ul>
+            </section>
+          
+
+          
+            <section>
+              <h2 class="section-heading">Interests</h2>
+              
+                <section>
+                  <h3>Sports &amp; Athletics</h3>
+                  <p>Active lifestyle with experience in competitive running and football.</p>
+                  
+                </section>
+              
+                <section>
+                  <h3>Continuous Learning</h3>
+                  <p>Regularly studying advanced Python, functional programming, and software architecture.</p>
+                  
+                </section>
+              
+            </section>
+          
+
+          
+            <section>
+              <h2 class="section-heading">Languages</h2>
+              <ul class="unstyled-list">
+                
+                  <li>
+                    <h3>English</h3>
+                    <p class="section-label">Advanced</p>
+                  </li>
+                
+                  <li>
+                    <h3>Ukrainian</h3>
+                    <p class="section-label">Native</p>
+                  </li>
+                
+              </ul>
+            </section>
+          
+        </aside>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="container">
+        <p>© 2026 Denys Kibalenko. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
