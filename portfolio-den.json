@@ -40,7 +40,7 @@
       "end_date": "Present",
       "summary": "Developing a scalable RESTful API backend for a multi-tenant CRM platform using Django REST Framework",
       "highlights": [
-        "Designed and enforced accountsubscription plan logic across all core entities",
+        "Designed and enforced account-subscription plan logic across all core entities",
         "Built ownership and account-scoping enforcement to enable tenant isolation and cross-account access control",
         "Extended DRF viewsets with custom actions and business-critical workflows",
         "Developed analytics logic, including aggregated metrics and performant query patterns",
