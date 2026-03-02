@@ -9,7 +9,7 @@
     "location": "Prague, Czechia / Remote"
   },
 
-  "summary": "Python Developer specializing in building robust RESTful APIs with Django and FastAPI, designing scalable backend architectures, and optimizing PostgreSQL databases. Strong foundation in OOP, SOLID principles, concurrency, and asynchronous programming. Experienced with Docker, AWS, and Linux environments. Known for fast learning, problem-solving, and effective collaboration in international teams.",
+  "summary": "Builds <b>real features</b> and <b>production-ready backend systems</b>, with strong <b>architectural reasoning</b>. Designs <b>RESTful APIs</b> using <b>Django</b> and <b>async FastAPI</b>, and optimizes <b>PostgreSQL</b> databases. Solid foundation in <b>OOP</b>, <b>SOLID</b> principles, <b>concurrency</b>, and <b>async programming</b>. Experienced with <b>Docker multi-service environments</b>, <b>AWS</b>, and <b>Linux</b>. Known for fast learning, problem-solving, and effective collaboration in international teams.",
 
   "base_url": "127.0.0.1:5500",
 
@@ -38,11 +38,10 @@
       "url": "",
       "start_date": "03/2025",
       "end_date": "Present",
-      "summary": "Developing a scalable RESTful API backend for a multi-tenant CRM platform using Django REST Framework",
+      "summary": "Building a RESTful API backend for a multi-tenant influencer CRM platform using Django REST Framework",
       "highlights": [
-        "Designed and enforced account-subscription plan logic across all core entities",
-        "Built ownership and account-scoping enforcement to enable tenant isolation and cross-account access control",
-        "Extended DRF viewsets with custom actions and business-critical workflows",
+        "Built a multi-tenant tracking architecture with strict account isolation & ownership enforcement logic",
+        "Integrated with external tracking engine through a custom Python client & built public rate-limited endpoints",
         "Developed analytics logic, including aggregated metrics and performant query patterns",
         "Designed relational SQL data models and optimized PostgreSQL queries for performance",
         "Containerized backend services using Docker, enabling reproducible development environments"
@@ -81,6 +80,32 @@
   ],
 
   "projects": [
+    {
+      "title": "Online Cinema Platform — FastAPI, Async Architecture, RBAC, Celery, WebSockets",
+      "summary": "A production-grade backend for an online cinema platform built with FastAPI, async SQLAlchemy, PostgreSQL, Redis, and Celery. The system implements a complete authentication and authorization flow, real-time features, background task processing, and a modular domain-driven architecture suitable for scaling into a full streaming service.",
+      "url": "https://github.com/dkibalenko/online-cinema-fastapi/tree/dev",
+      "highlights": [
+        "Fully asynchronous backend built with FastAPI, PostgreSQL, SQLAlchemy 2.0, Redis, and Celery",
+        "Advanced authentication system with JWT, refresh tokens, account activation, and secure password handling",
+        "Role-based access control (RBAC) with User / Moderator / Admin permissions and protected routes.",
+        "Background task pipeline using Celery for email notifications and account lifecycle events",
+        "Real-time features powered by WebSockets (live comments, notifications, chat)",
+        "Clean domain-driven architecture with repositories, services, and strict Pydantic validation",
+        "Movie catalog with ratings, likes, favorites, comments, and user profile management",
+        "Comprehensive integration test suite using pytest-asyncio and isolated PostgreSQL test databases"
+      ],
+      "images": [
+        {"img_path": "img/project_cinema/Cinema Up1.webp", "caption": "Celery Run"},
+        {"img_path": "img/project_cinema/Cinema Up2.webp", "caption": "Celery Cleanup"},
+        {"img_path": "img/project_cinema/Cinema 1 Auth.webp", "caption": "API Auth"},
+        {"img_path": "img/project_cinema/Cinema 2 API.webp", "caption": "API Users"},
+        {"img_path": "img/project_cinema/Cinema 3 API.webp", "caption": "API Movies"},
+        {"img_path": "img/project_cinema/Cinema PgAdmin.webp", "caption": "PgAdmin"},
+        {"img_path": "img/project_cinema/Cinema Flower.webp", "caption": "Flower Task"},
+        {"img_path": "img/project_cinema/Cinema MailHog.webp", "caption": "MailHog"},
+        {"img_path": "img/project_cinema/Cinema MinIO.webp", "caption": "MinIO"}
+      ]
+    },
     {
       "title": "Theatre API Service",
       "summary": "An API service for theatre management built with Django REST Framework, supporting shows, performances, bookings, and user roles.",
@@ -154,10 +179,13 @@
 
     "skills": [
       { "name": "Python (Concurrency & Parallelism)" },
+      { "name": "OOP / SOLID Principles" },
       { "name": "Django / Django REST / Django ORM" },
-      { "name": "FastAPI / Pydantic" },
+      { "name": "FastAPI / Pydantic / SQLAlchemy" },
       { "name": "SQL / PostgreSQL / Query Optimization" },
-      { "name": "SQLAlchemy" },
+      { "name": "Redis / Celery" },
+      { "name": "WebSockets" },
+      { "name": "Pytest / Pytest-Asyncio / Postman" },
       { "name": "Docker" },
       { "name": "Linux" },
       { "name": "AWS (IAM, S3, RDS)" },
