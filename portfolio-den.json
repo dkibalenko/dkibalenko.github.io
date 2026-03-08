@@ -40,8 +40,8 @@
       "end_date": "Present",
       "summary": "Building a RESTful API backend for a multi-tenant influencer CRM platform using Django REST Framework",
       "highlights": [
-        "Built a multi-tenant tracking architecture with strict account isolation & ownership enforcement logic",
-        "Integrated with external tracking engine through a custom Python client & built public rate-limited endpoints",
+        "Built a multi-tenant tracking architecture with strict account isolation & ownership enforcement",
+        "Integrated external tracking engine through a custom Python client & built public rate-limited endpoints",
         "Developed analytics logic, including aggregated metrics and performant query patterns",
         "Designed relational SQL data models and optimized PostgreSQL queries for performance",
         "Containerized backend services using Docker, enabling reproducible development environments"
@@ -92,6 +92,7 @@
         "Real-time features powered by WebSockets (live comments, notifications, chat)",
         "Clean domain-driven architecture with repositories, services, and strict Pydantic validation",
         "Movie catalog with ratings, likes, favorites, comments, and user profile management",
+        "Redis-powered caching with user-specific keys and event-driven invalidation for fast, consistent movie catalog responses",
         "Comprehensive integration test suite using pytest-asyncio and isolated PostgreSQL test databases"
       ],
       "images": [
