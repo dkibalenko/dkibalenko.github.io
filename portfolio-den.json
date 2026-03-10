@@ -9,7 +9,7 @@
     "location": "Prague, Czechia / Remote"
   },
 
-  "summary": "Builds real features and production-ready backend systems, with strong architectural reasoning. Designs RESTful APIs using Django and async FastAPI, and optimizes PostgreSQL databases. Solid foundation in OOP, SOLID principles, concurrency, and async programming. Experienced with Docker multi-service environments, AWS, and Linux. Known for fast learning, problem-solving, and effective collaboration in international teams.",
+  "summary": "Backend engineer building production-ready systems with FastAPI, Django, PostgreSQL, Redis, and Celery. Skilled in designing scalable REST APIs, async architectures, and multi-service Docker environments. Strong foundation in OOP, SOLID, concurrency, and database optimization. Experienced with AWS, Linux, CI pipelines, and strict code-quality workflows. Fast learner with a practical, problem-solving mindset and experience collaborating in international teams.",
 
   "base_url": "127.0.0.1:5500",
 
@@ -93,7 +93,10 @@
         "Clean domain-driven architecture with repositories, services, and strict Pydantic validation",
         "Movie catalog with ratings, likes, favorites, comments, and user profile management",
         "Redis-powered caching with user-specific keys and event-driven invalidation for fast, consistent movie catalog responses",
-        "Comprehensive integration test suite using pytest-asyncio and isolated PostgreSQL test databases"
+        "Comprehensive integration test suite using pytest-asyncio and isolated PostgreSQL test databases",
+        "Automated CI pipeline with Ruff, Mypy, Pytest, and coverage reporting to enforce code quality and maintain deterministic builds",
+        "Pre-commit workflow ensuring consistent formatting, linting, typing, and test execution before every commit",
+        "Strict typing across the entire codebase with mypy and Pydantic v2 for predictable, maintainable behavior"
       ],
       "images": [
         {"img_path": "img/project_cinema/Cinema Up1.webp", "caption": "Celery Run"},
