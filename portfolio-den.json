@@ -38,13 +38,8 @@
       "url": "",
       "start_date": "03/2025",
       "end_date": "Present",
-      "summary": "Building a RESTful API backend for a multi-tenant influencer CRM platform using Django REST Framework",
+      "summary": "Built a multi-tenant influencer CRM backend with Django REST Framework, ensuring strict tenant isolation and secure ownership boundaries. Integrated an external tracking engine via a custom Python client and delivered optimized analytics with performant SQL patterns. Designed relational data models and containerized the platform with Docker for reproducible development.",
       "highlights": [
-        "Built a multi-tenant tracking architecture with strict account isolation & ownership enforcement",
-        "Integrated external tracking engine through a custom Python client & built public rate-limited endpoints",
-        "Developed analytics logic, including aggregated metrics and performant query patterns",
-        "Designed relational SQL data models and optimized PostgreSQL queries for performance",
-        "Containerized backend services using Docker, enabling reproducible development environments"
       ]
     },
     {
@@ -53,28 +48,8 @@
       "url": "",
       "start_date": "12/2023",
       "end_date": "03/2025",
-      "summary": "Developing backend systems, RESTful APIs, and database-driven applications using Django, FastAPI, and PostgreSQL. Delivering production-ready solutions with clean architecture, SOLID principles, and modern Python tooling.",
+      "summary": "Developed production-grade backend systems and REST APIs using Django, FastAPI, and PostgreSQL, following clean architecture and SOLID principles. Built domain-driven services with robust authentication, optimized SQL performance, and scalable service-repository patterns. Delivered containerized, cloud-ready solutions using Docker, GitHub, and deployments on Render and AWS (IAM, S3, RDS).",
       "highlights": [
-        "Built a domain-driven FastAPI backend using a clean layered architecture with robust custom  authentication, token workflows, and maintainable service-repository patterns",
-        "Built scalable backend logic using OOP, SOLID principles, and design patterns",
-        "Optimized SQL queries and database schemas using PostgreSQL, Django ORM, and SQLAlchemy",
-        "Containerized applications with Docker for development and deployment",
-        "Managed version control using Git and GitHub",
-        "Deployed applications on Render and AWS (IAM, S3, RDS)"
-      ]
-    },
-    {
-      "company": "Maritime Industry",
-      "position": "Chief Officer - Shipping Industry",
-      "url": "",
-      "start_date": "03/2009",
-      "end_date": "05/2023",
-      "summary": "Senior maritime officer responsible for cargo operations, vessel stability, navigation, and safety management aboard international cargo vessels.",
-      "highlights": [
-        "Oversaw cargo and ballast operations ensuring vessel safety and efficiency",
-        "Managed ship stability, hull strength, and cargo distribution",
-        "Performed marine navigation using ECDIS, ARPA, and advanced maritime systems",
-        "Led international teams and coordinated operational workflows"
       ]
     }
   ],
