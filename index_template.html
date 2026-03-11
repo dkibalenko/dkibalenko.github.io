@@ -192,6 +192,19 @@
 
         <!-- Sidebar Section -->
         <aside>
+          {% if skills %}
+            <section>
+              <h2 class="section-heading">Skills</h2>
+              <ul class="unstyled-list">
+                {% for skill in skills %}
+                  <li>
+                    <h3>{{ skill.name }}</h3>
+                  </li>
+                {% endfor %}
+              </ul>
+            </section>
+          {% endif %}
+
           {% if education %}
             <section>
               <h2 class="section-heading">Education</h2>
@@ -219,19 +232,6 @@
             </section>
           {% endif %}
 
-          {% if skills %}
-            <section>
-              <h2 class="section-heading">Skills</h2>
-              <ul class="unstyled-list">
-                {% for skill in skills %}
-                  <li>
-                    <h3>{{ skill.name }}</h3>
-                  </li>
-                {% endfor %}
-              </ul>
-            </section>
-          {% endif %}
-
           {% if additional_education %}
             <section>
               <h2 class="section-heading">Additional Education</h2>
@@ -245,6 +245,20 @@
                     {% else %}
                       {{ course.title }}
                     {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </section>
+          {% endif %}
+
+          {% if languages %}
+            <section>
+              <h2 class="section-heading">Languages</h2>
+              <ul class="unstyled-list">
+                {% for lang in languages %}
+                  <li>
+                    <h3>{{ lang.language }}</h3>
+                    <p class="section-label">{{ lang.fluency }}</p>
                   </li>
                 {% endfor %}
               </ul>
@@ -287,19 +301,6 @@
             </section>
           {% endif %}
 
-          {% if languages %}
-            <section>
-              <h2 class="section-heading">Languages</h2>
-              <ul class="unstyled-list">
-                {% for lang in languages %}
-                  <li>
-                    <h3>{{ lang.language }}</h3>
-                    <p class="section-label">{{ lang.fluency }}</p>
-                  </li>
-                {% endfor %}
-              </ul>
-            </section>
-          {% endif %}
         </aside>
       </div>
     </div>

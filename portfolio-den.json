@@ -160,16 +160,6 @@
 
   "education": [
     {
-      "institution": "Mate Academy",
-      "location": "Kyiv, Ukraine",
-      "url": "https://mate.academy/en/",
-      "degrees": ["Python Developer"],
-      "honors": [],
-      "gpa_cumulative": "",
-      "gpa_major": "",
-      "graduation_date": "2025"
-    },
-    {
       "institution": "Kherson State Maritime Academy",
       "location": "Kherson, Ukraine",
       "url": "https://ksma.ks.ua/?page_id=284&lang=en",
@@ -216,6 +206,10 @@
   ],
 
   "additional_education": [
+    {
+      "title": "Mate Academy - Python Developer",
+      "certificate_url": "https://drive.google.com/file/d/13bJLJiaOqbj5vxsxNt1Rowph1DdYpUiG/view?usp=sharing"
+    },
     {
       "title": "Udemy - Python 3: Deep Dive (Functional)",
       "certificate_url": "https://drive.google.com/file/d/1UgDbtbt7HbdMJofbn9LC_z7hf_A_HuvF/view?usp=sharing"
