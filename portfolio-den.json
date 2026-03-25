@@ -57,21 +57,22 @@
   "projects": [
     {
       "title": "Online Cinema Platform — FastAPI, Async Architecture, RBAC, Celery, WebSockets",
-      "summary": "A production-grade backend for an online cinema platform built with FastAPI, async SQLAlchemy, PostgreSQL, Redis, and Celery. The system implements a complete authentication and authorization flow, real-time features, background task processing, and a modular domain-driven architecture suitable for scaling into a full streaming service.",
+      "summary": "A production-grade backend for an online cinema platform built with FastAPI, async SQLAlchemy, PostgreSQL, Redis, and Celery. The system implements a complete authentication and authorization flow, real-time features, background task processing, and a clean modular structure designed for scalability and maintainability",
       "url": "https://github.com/dkibalenko/online-cinema-fastapi/tree/dev",
       "highlights": [
-        "Fully asynchronous backend built with FastAPI, PostgreSQL, SQLAlchemy 2.0, Redis, and Celery",
-        "Advanced authentication system with JWT, refresh tokens, account activation, and secure password handling",
-        "Role-based access control (RBAC) with User / Moderator / Admin permissions and protected routes.",
+        "Asynchronous backend built with FastAPI, PostgreSQL, async SQLAlchemy, Redis, Celery & Nginx",
+        "Authentication system with JWT, refresh tokens, account activation, & secure password handling",
+        "Role-based access control with User / Moderator / Admin permissions and protected routes.",
         "Background task pipeline using Celery for email notifications and account lifecycle events",
         "Real-time features powered by WebSockets (live comments, notifications, chat)",
-        "Clean domain-driven architecture with repositories, services, and strict Pydantic validation",
+        "Clean, layered project structure with repositories, services, and strict Pydantic validation.",
         "Movie catalog with ratings, likes, favorites, comments, and user profile management",
-        "Redis-powered caching with user-specific keys and event-driven invalidation for fast, consistent movie catalog responses",
+        "Redis-powered caching for fast, consistent movie catalog responses (user-specific keys & event-driven invalidation)",
         "Comprehensive integration test suite using pytest-asyncio and isolated PostgreSQL test databases",
         "Automated CI pipeline with Ruff, Mypy, Pytest, and coverage reporting to enforce code quality and maintain deterministic builds",
         "Pre-commit workflow ensuring consistent formatting, linting, typing, and test execution before every commit",
-        "Strict typing across the entire codebase with mypy and Pydantic v2 for predictable, maintainable behavior"
+        "Strict typing across the entire codebase with mypy and Pydantic v2 for predictable, maintainable behavior",
+        "Nginx reverse proxy for handling HTTPS, routing, caching, and WebSocket upgrades"
       ],
       "images": [
         {"img_path": "img/project_cinema/Cinema Up1.webp", "caption": "Celery Run"},
