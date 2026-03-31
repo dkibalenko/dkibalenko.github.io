@@ -1,6 +1,6 @@
 {
   "name": "Denys Kibalenko",
-  "label": "Backend Engineer for Scalable Systems",
+  "label": "Python Backend Developer for Scalable Systems",
   "image_path": "",
 
   "contact": {
@@ -9,7 +9,7 @@
     "location": "Prague, Czechia / Remote"
   },
 
-  "summary": "Backend engineer building production-ready systems with FastAPI, Django, PostgreSQL, Redis, and Celery. Skilled in designing scalable REST APIs, async architectures, and multi-service Docker environments. Strong foundation in OOP, SOLID, concurrency, and database optimization. Experienced with AWS, Linux, CI pipelines, and strict code-quality workflows. Fast learner with a practical, problem-solving mindset and experience collaborating in international teams.",
+  "summary": "Backend developer for building production-ready systems with FastAPI, Django, PostgreSQL, Redis, and Celery. Skilled in designing scalable REST APIs, async architectures, and multi-service Docker environments. Strong foundation in OOP, SOLID, concurrency, and database optimization. Experienced with AWS, Linux, CI/CD pipelines, and strict code-quality workflows. Fast learner with a practical, problem-solving mindset and experience collaborating in international teams.",
 
   "base_url": "127.0.0.1:5500",
 
@@ -48,7 +48,7 @@
       "url": "",
       "start_date": "12/2023",
       "end_date": "03/2025",
-      "summary": "Developed production-grade backend systems and REST APIs using Django, FastAPI, and PostgreSQL. Designed clean, maintainable service-repository layers following SOLID principles. Implemented robust authentication flows, optimized SQL performance, and scalable async processing. Delivered containerized, cloud-ready solutions using Docker, GitHub Actions, and deployments on Render and AWS (IAM, S3, RDS).",
+      "summary": "Developed production-grade backend systems and REST APIs using Django, FastAPI, and PostgreSQL. Designed clean, maintainable service-repository layers following SOLID principles. Implemented robust authentication flows, optimized SQL performance, and scalable async processing. Delivered containerized, cloud-ready solutions using Docker, GitHub Actions, and deployments on Render and AWS (EC2, IAM, S3, RDS).",
       "highlights": [
       ]
     }
@@ -75,13 +75,13 @@
         "Nginx reverse proxy for handling HTTPS, routing, caching, and WebSocket upgrades"
       ],
       "images": [
-        {"img_path": "img/project_cinema/Cinema Up1.webp", "caption": "Celery Run"},
-        {"img_path": "img/project_cinema/Cinema Up2.webp", "caption": "Celery Cleanup"},
+        {"img_path": "img/project_cinema/CI-Cinema.webp", "caption": "CI Pipeline"},
+        {"img_path": "img/project_cinema/Locust Test1.webp", "caption": "Locust Load Testing"},
+        {"img_path": "img/project_cinema/Locust Test2.webp", "caption": "Locust Load Charts"},
         {"img_path": "img/project_cinema/Cinema 1 Auth.webp", "caption": "API Auth"},
         {"img_path": "img/project_cinema/Cinema 2 API.webp", "caption": "API Users"},
         {"img_path": "img/project_cinema/Cinema 3 API.webp", "caption": "API Movies"},
         {"img_path": "img/project_cinema/Cinema PgAdmin.webp", "caption": "PgAdmin"},
-        {"img_path": "img/project_cinema/Cinema Flower.webp", "caption": "Flower Task"},
         {"img_path": "img/project_cinema/Cinema MailHog.webp", "caption": "MailHog"},
         {"img_path": "img/project_cinema/Cinema MinIO.webp", "caption": "MinIO"}
       ]
@@ -153,13 +153,13 @@
       { "name": "Django / Django REST / Django ORM" },
       { "name": "FastAPI / Pydantic / SQLAlchemy" },
       { "name": "SQL / PostgreSQL / Query Optimization" },
+      { "name": "Nginx / WebSockets" },
       { "name": "Redis / Celery" },
-      { "name": "WebSockets" },
-      { "name": "Pytest / Pytest-Asyncio / Postman" },
-      { "name": "Docker" },
-      { "name": "Linux" },
-      { "name": "AWS (IAM, S3, RDS)" },
+      { "name": "Pytest / Pytest-Asyncio" },
+      { "name": "Postman / Locust" },
+      { "name": "AWS (EC2, IAM, S3, RDS)" },
       { "name": "Git / GitHub" },
+      { "name": "Docker / Linux / CI/CD / Git Actions" },
       { "name": "Algorithms & Data Structures" }
     ],
 
