@@ -37,7 +37,7 @@
       "position": "Freelance Python Developer",
       "url": "",
       "start_date": "03/2025",
-      "end_date": "Present",
+      "end_date": "03/2026",
       "summary": "Built a multi-tenant influencer CRM backend with Django REST Framework, ensuring strict tenant isolation and secure ownership boundaries. Integrated an external tracking engine via a custom Python client and delivered optimized analytics with performant SQL patterns. Designed relational data models and containerized the platform with Docker for reproducible development.",
       "highlights": [
       ]
@@ -157,7 +157,7 @@
       { "name": "Redis / Celery" },
       { "name": "Pytest / Pytest-Asyncio" },
       { "name": "Postman / Locust" },
-      { "name": "AWS (EC2, IAM, S3, RDS)" },
+      { "name": "AWS (IAM, EC2, Lambda, ECS, S3, RDS)" },
       { "name": "Git / GitHub" },
       { "name": "Docker / Linux / CI/CD / Git Actions" },
       { "name": "Algorithms & Data Structures" }
