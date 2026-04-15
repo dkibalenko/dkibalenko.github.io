@@ -157,9 +157,9 @@
       { "name": "Redis / Celery" },
       { "name": "Pytest / Pytest-Asyncio" },
       { "name": "Postman / Locust" },
-      { "name": "AWS (IAM, EC2, Lambda, ECS, S3, RDS)" },
+      { "name": "AWS (IAM, EC2, Lambda, ECS, ECR, S3, RDS)" },
       { "name": "Git / GitHub" },
-      { "name": "Docker / Linux / CI/CD / Git Actions" },
+      { "name": "Docker / Linux / CI/CD / GitHub Actions" },
       { "name": "Algorithms & Data Structures" }
     ],
 
