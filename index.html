@@ -200,79 +200,148 @@
                     
                       <a href="https://github.com/dkibalenko/online-cinema-fastapi/tree/dev">Online Cinema Platform — FastAPI, Async Architecture, RBAC, Celery, WebSockets</a>
                     
+                    
                   </h3>
                   <p>A production-grade backend for an online cinema platform built with FastAPI, async SQLAlchemy, PostgreSQL, Redis, and Celery. The system implements a complete authentication and authorization flow, real-time features, background task processing, and a clean modular structure designed for scalability and maintainability</p>
                   
                     <ul>
-                      <li>Asynchronous backend built with FastAPI, PostgreSQL, async SQLAlchemy, Redis, Celery &amp; Nginx</li><li>Authentication system with JWT, refresh tokens, account activation, &amp; secure password handling</li><li>Role-based access control with User / Moderator / Admin permissions and protected routes.</li><li>Background task pipeline using Celery for email notifications and account lifecycle events</li><li>Real-time features powered by WebSockets (live comments, notifications, chat)</li><li>Clean, layered project structure with repositories, services, and strict Pydantic validation.</li><li>Movie catalog with ratings, likes, favorites, comments, and user profile management</li><li>Redis-powered caching for fast, consistent movie catalog responses (user-specific keys &amp; event-driven invalidation)</li><li>Comprehensive integration test suite using pytest-asyncio and isolated PostgreSQL test databases</li><li>Automated CI pipeline with Ruff, Mypy, Pytest, and coverage reporting to enforce code quality and maintain deterministic builds</li><li>Pre-commit workflow ensuring consistent formatting, linting, typing, and test execution before every commit</li><li>Strict typing across the entire codebase with mypy and Pydantic v2 for predictable, maintainable behavior</li><li>Nginx reverse proxy for handling HTTPS, routing, caching, and WebSocket upgrades</li>
+                      <li>Async FastAPI backend with PostgreSQL (async SQLAlchemy), Redis, Celery, and Nginx</li><li>JWT auth with refresh tokens, account activation, and password reset; role-based access control (User / Moderator / Admin)</li><li>Real-time WebSockets for live comments, notifications, and chat</li><li>Celery background task pipeline for email notifications and account lifecycle events</li><li>Movie catalog with ratings, likes, favorites, comments, and user profile management</li><li>Redis caching with user-specific keys and event-driven invalidation for consistent catalog responses</li><li>S3‑compatible object storage for user avatars and media</li><li>Integration test suite with pytest-asyncio on isolated PostgreSQL databases</li><li>CI pipeline with Ruff, Mypy, Pytest, and coverage; pre-commit hooks enforcing formatting, linting, and typing</li><li>Nginx reverse proxy for HTTPS, routing, WebSocket upgrades, and caching</li>
                     </ul>
                   
                   
-                    <div class="gallery main-gallery">
-                      
-                        <figure>
-                          <a href="img/project_cinema/CI-Cinema.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_cinema/CI-Cinema.webp" alt="CI Pipeline">
-                          </a>
-                          <figcaption>CI Pipeline</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_cinema/Locust Test1.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_cinema/Locust Test1.webp" alt="Locust Load Testing">
-                          </a>
-                          <figcaption>Locust Load Testing</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_cinema/Locust Test2.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_cinema/Locust Test2.webp" alt="Locust Load Charts">
-                          </a>
-                          <figcaption>Locust Load Charts</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_cinema/Cinema 1 Auth.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_cinema/Cinema 1 Auth.webp" alt="API Auth">
-                          </a>
-                          <figcaption>API Auth</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_cinema/Cinema 2 API.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_cinema/Cinema 2 API.webp" alt="API Users">
-                          </a>
-                          <figcaption>API Users</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_cinema/Cinema 3 API.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_cinema/Cinema 3 API.webp" alt="API Movies">
-                          </a>
-                          <figcaption>API Movies</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_cinema/Cinema PgAdmin.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_cinema/Cinema PgAdmin.webp" alt="PgAdmin">
-                          </a>
-                          <figcaption>PgAdmin</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_cinema/Cinema MailHog.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_cinema/Cinema MailHog.webp" alt="MailHog">
-                          </a>
-                          <figcaption>MailHog</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_cinema/Cinema MinIO.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_cinema/Cinema MinIO.webp" alt="MinIO">
-                          </a>
-                          <figcaption>MinIO</figcaption>
-                        </figure>
-                      
+                    <div class="carousel" data-carousel>
+                      <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+                      <div class="carousel-track">
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_cinema/Cinema 1 Auth.webp" target="_blank">
+                                <img src="img/project_cinema/Cinema 1 Auth.webp" alt="API Auth">
+                              </a>
+                            
+                            <figcaption>API Auth</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_cinema/Cinema 2 API.webp" target="_blank">
+                                <img src="img/project_cinema/Cinema 2 API.webp" alt="API Users">
+                              </a>
+                            
+                            <figcaption>API Users</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_cinema/Cinema 3 API.webp" target="_blank">
+                                <img src="img/project_cinema/Cinema 3 API.webp" alt="API Movies">
+                              </a>
+                            
+                            <figcaption>API Movies</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_cinema/Cinema MinIO.webp" target="_blank">
+                                <img src="img/project_cinema/Cinema MinIO.webp" alt="MinIO">
+                              </a>
+                            
+                            <figcaption>MinIO</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_cinema/Cinema MailHog.webp" target="_blank">
+                                <img src="img/project_cinema/Cinema MailHog.webp" alt="MailHog">
+                              </a>
+                            
+                            <figcaption>MailHog</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_cinema/Cinema PgAdmin.webp" target="_blank">
+                                <img src="img/project_cinema/Cinema PgAdmin.webp" alt="PgAdmin">
+                              </a>
+                            
+                            <figcaption>PgAdmin</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_cinema/Locust Test1.webp" target="_blank">
+                                <img src="img/project_cinema/Locust Test1.webp" alt="Locust Load Testing">
+                              </a>
+                            
+                            <figcaption>Locust Load Testing</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_cinema/Locust Test2.webp" target="_blank">
+                                <img src="img/project_cinema/Locust Test2.webp" alt="Locust Test Charts">
+                              </a>
+                            
+                            <figcaption>Locust Test Charts</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_cinema/CI-Cinema.webp" target="_blank">
+                                <img src="img/project_cinema/CI-Cinema.webp" alt="CI Pipeline">
+                              </a>
+                            
+                            <figcaption>CI Pipeline</figcaption>
+                          </figure>
+                        
+                      </div>
+                      <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+                    </div>
+                  
+                </section>
+              
+                <section>
+                  <h3>
+                    
+                      <a href="https://github.com/dkibalenko/SPA-comments">Real-Time Nested Comments System</a>
+                    
+                    
+                      <a href="https://spa.meizuno.com/" target="_blank" rel="noopener" class="demo-badge">Live ↗</a>
+                    
+                  </h3>
+                  <p>A full-stack SPA delivering live comment threads with file attachments, async email notifications, and sub-second WebSocket updates — containerised and deployed to production on a VPS.</p>
+                  
+                    <ul>
+                      <li>Nested comment threads with recursive tree rendering and live reply-count updates</li><li>Real-time broadcasting via Django Channels + Redis pub/sub (WebSocket push to all connected clients)</li><li>Asynchronous email notifications via Celery, decoupled through Django signals (Observer pattern)</li><li>File attachment support (images resized server-side, text files validated) with atomic rollback on upload failure</li><li>Server-side HTML sanitisation (allowed-tag allowlist) and captcha validation on every submission</li><li>Response caching with per-ordering/page cache keys and cache invalidation on new comments</li><li>Dockerised stack (PostgreSQL, Redis, Daphne, Celery, Nginx) with separate dev and production compose files</li><li>GitHub Actions CI/CD pipeline — automated linting, tests, and deployment to production VPS on every push</li><li>Full test suite: pytest-django integration tests with real DB, factory fixtures, and cache/transaction boundary coverage</li>
+                    </ul>
+                  
+                  
+                    <div class="carousel" data-carousel>
+                      <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+                      <div class="carousel-track">
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="https://www.youtube.com/watch?v=9wC8a-C89hY" target="_blank" rel="noopener" class="video-thumb">
+                                <img src="https://img.youtube.com/vi/9wC8a-C89hY/hqdefault.jpg" alt="Comments Demo">
+                                <span class="play-btn" aria-hidden="true"></span>
+                              </a>
+                            
+                            <figcaption>Comments Demo</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="https://www.youtube.com/watch?v=Z8BCQjOLAWA" target="_blank" rel="noopener" class="video-thumb">
+                                <img src="https://img.youtube.com/vi/Z8BCQjOLAWA/hqdefault.jpg" alt="Load Testing (Locust)">
+                                <span class="play-btn" aria-hidden="true"></span>
+                              </a>
+                            
+                            <figcaption>Load Testing (Locust)</figcaption>
+                          </figure>
+                        
+                      </div>
+                      <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
                     </div>
                   
                 </section>
@@ -282,58 +351,84 @@
                     
                       <a href="https://github.com/dkibalenko/theatre-api-service-mate/tree/main">Theatre API Service</a>
                     
+                    
                   </h3>
                   <p>An API service for theatre management built with Django REST Framework, supporting shows, performances, bookings, and user roles.</p>
                   
                     <ul>
-                      <li>Built a fully authenticated REST API using JWT tokens, custom email-based login, and role-based access control</li><li>Designed a relational data model with complex FK/M2M relationships, validation rules, and database-level constraints to ensure data integrity (e.g., unique seat reservations per performance)</li><li>Implemented advanced business logic including automatic seat availability calculation, multi-layer ticket validation, and user-bound reservation creation</li><li>Developed a scalable API layer with DRF ViewSets, nested serializers, and optimized queries using select_related / prefetch_related to eliminate N+1 issues</li><li>Containerized the entire environment with Docker + Postgres + PgAdmin</li><li>Added JWT token blacklisting with automated cleanup via Celery, Celery Beat, Redis</li>
+                      <li>REST API with JWT auth, custom email-based login, and role-based access control (Django REST Framework)</li><li>Relational data model with FK/M2M relationships, validation rules, and DB constraints (e.g., unique seat reservations per performance)</li><li>Business logic for automatic seat availability calculation, multi-layer ticket validation, and user-bound reservation creation</li><li>DRF ViewSets and nested serializers with select_related / prefetch_related to eliminate N+1 queries</li><li>Dockerised environment with PostgreSQL and PgAdmin</li><li>JWT token blacklisting with automated Celery Beat cleanup via Redis</li>
                     </ul>
                   
                   
-                    <div class="gallery main-gallery">
-                      
-                        <figure>
-                          <a href="img/project_theatre/Theatre 1 Celery Run.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_theatre/Theatre 1 Celery Run.webp" alt="Celery Run">
-                          </a>
-                          <figcaption>Celery Run</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_theatre/Theatre 2 PgAdmin.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_theatre/Theatre 2 PgAdmin.webp" alt="PgAdmin">
-                          </a>
-                          <figcaption>PgAdmin</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_theatre/Theatre 3 API.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_theatre/Theatre 3 API.webp" alt="API Theatre">
-                          </a>
-                          <figcaption>API Theatre</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_theatre/Theatre 4 API.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_theatre/Theatre 4 API.webp" alt="API User">
-                          </a>
-                          <figcaption>API User</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_theatre/Theatre 5 API Login.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_theatre/Theatre 5 API Login.webp" alt="API Login">
-                          </a>
-                          <figcaption>API Login</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_theatre/Theatre 7 API Actor list.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_theatre/Theatre 7 API Actor list.webp" alt="API Actor List">
-                          </a>
-                          <figcaption>API Actor List</figcaption>
-                        </figure>
-                      
+                    <div class="carousel" data-carousel>
+                      <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+                      <div class="carousel-track">
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_theatre/Theatre 4 API.webp" target="_blank">
+                                <img src="img/project_theatre/Theatre 4 API.webp" alt="API User">
+                              </a>
+                            
+                            <figcaption>API User</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_theatre/Theatre 3 API.webp" target="_blank">
+                                <img src="img/project_theatre/Theatre 3 API.webp" alt="API Theatre">
+                              </a>
+                            
+                            <figcaption>API Theatre</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_theatre/Theatre 7 API Actor list.webp" target="_blank">
+                                <img src="img/project_theatre/Theatre 7 API Actor list.webp" alt="API Actor List">
+                              </a>
+                            
+                            <figcaption>API Actor List</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_theatre/Theatre 5 API Login.webp" target="_blank">
+                                <img src="img/project_theatre/Theatre 5 API Login.webp" alt="API Login">
+                              </a>
+                            
+                            <figcaption>API Login</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_theatre/Theatre 6 API Login Token.webp" target="_blank">
+                                <img src="img/project_theatre/Theatre 6 API Login Token.webp" alt="API Login Token">
+                              </a>
+                            
+                            <figcaption>API Login Token</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_theatre/Theatre 1 Celery Run.webp" target="_blank">
+                                <img src="img/project_theatre/Theatre 1 Celery Run.webp" alt="Celery Tasks">
+                              </a>
+                            
+                            <figcaption>Celery Tasks</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_theatre/Theatre 2 PgAdmin.webp" target="_blank">
+                                <img src="img/project_theatre/Theatre 2 PgAdmin.webp" alt="PgAdmin">
+                              </a>
+                            
+                            <figcaption>PgAdmin</figcaption>
+                          </figure>
+                        
+                      </div>
+                      <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
                     </div>
                   
                 </section>
@@ -343,79 +438,102 @@
                     
                       <a href="https://github.com/dkibalenko/restaurant-mate">Restaurant Kitchen Management Service</a>
                     
+                    
                   </h3>
                   <p>A Django-based backend system representing a restaurant kitchen workflow, including staff management, dish preparation, and cook assignment to dishes.</p>
                   
                     <ul>
-                      <li>Built a Django application with a custom user model and automatic slug generation for clean URLs</li><li>Implemented CRUD workflows for dishes, ingredients, dish types, and cooks, including image uploads and validation</li><li>Designed a dynamic assignment system allowing cooks to be added/removed from dishes via a toggle action.</li><li>Added search, filtering, and pagination across all major list views for efficient data navigation.</li><li>Enhanced UX with custom middleware, optimized queries using prefetch_related, and persistent query parameters</li>
+                      <li>Django app with a custom user model and automatic slug generation for clean URLs</li><li>Full CRUD for dishes, dish types, ingredients, and cooks — with image upload and input validation</li><li>Dynamic cook-to-dish assignment via a toggle action (add/remove without a dedicated form)</li><li>Search, filtering, and pagination across all major list views</li><li>Custom middleware, prefetch_related query optimization, and persistent query parameters</li>
                     </ul>
                   
                   
-                    <div class="gallery main-gallery">
-                      
-                        <figure>
-                          <a href="img/project_restaurant/Restaurant 1 Login.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_restaurant/Restaurant 1 Login.webp" alt="Login Page">
-                          </a>
-                          <figcaption>Login Page</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_restaurant/Restaurant 2 Index.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_restaurant/Restaurant 2 Index.webp" alt="Dashboard">
-                          </a>
-                          <figcaption>Dashboard</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_restaurant/Restaurant 3 Cook list.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_restaurant/Restaurant 3 Cook list.webp" alt="Cooks">
-                          </a>
-                          <figcaption>Cooks</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_restaurant/Restaurant 4 Cook Detail.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_restaurant/Restaurant 4 Cook Detail.webp" alt="Cook Detail">
-                          </a>
-                          <figcaption>Cook Detail</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_restaurant/Restaurant 6 Dish list.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_restaurant/Restaurant 6 Dish list.webp" alt="Dish List">
-                          </a>
-                          <figcaption>Dish List</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_restaurant/Restaurant 7 Dish Detail.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_restaurant/Restaurant 7 Dish Detail.webp" alt="Dish Detail">
-                          </a>
-                          <figcaption>Dish Detail</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_restaurant/Restaurant 8 Dish Create.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_restaurant/Restaurant 8 Dish Create.webp" alt="Dish Create">
-                          </a>
-                          <figcaption>Dish Create</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_restaurant/Restaurant 9 Cook Create.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_restaurant/Restaurant 9 Cook Create.webp" alt="Cook Create">
-                          </a>
-                          <figcaption>Cook Create</figcaption>
-                        </figure>
-                      
-                        <figure>
-                          <a href="img/project_restaurant/Restaurant 12 Logout.webp" target="_blank">
-                            <img width="600" height="338" src="img/project_restaurant/Restaurant 12 Logout.webp" alt="Logout Page">
-                          </a>
-                          <figcaption>Logout Page</figcaption>
-                        </figure>
-                      
+                    <div class="carousel" data-carousel>
+                      <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+                      <div class="carousel-track">
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_restaurant/Restaurant 1 Login.webp" target="_blank">
+                                <img src="img/project_restaurant/Restaurant 1 Login.webp" alt="Login Page">
+                              </a>
+                            
+                            <figcaption>Login Page</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_restaurant/Restaurant 2 Index.webp" target="_blank">
+                                <img src="img/project_restaurant/Restaurant 2 Index.webp" alt="Dashboard">
+                              </a>
+                            
+                            <figcaption>Dashboard</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_restaurant/Restaurant 3 Cook list.webp" target="_blank">
+                                <img src="img/project_restaurant/Restaurant 3 Cook list.webp" alt="Cooks">
+                              </a>
+                            
+                            <figcaption>Cooks</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_restaurant/Restaurant 4 Cook Detail.webp" target="_blank">
+                                <img src="img/project_restaurant/Restaurant 4 Cook Detail.webp" alt="Cook Detail">
+                              </a>
+                            
+                            <figcaption>Cook Detail</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_restaurant/Restaurant 6 Dish list.webp" target="_blank">
+                                <img src="img/project_restaurant/Restaurant 6 Dish list.webp" alt="Dish List">
+                              </a>
+                            
+                            <figcaption>Dish List</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_restaurant/Restaurant 7 Dish Detail.webp" target="_blank">
+                                <img src="img/project_restaurant/Restaurant 7 Dish Detail.webp" alt="Dish Detail">
+                              </a>
+                            
+                            <figcaption>Dish Detail</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_restaurant/Restaurant 8 Dish Create.webp" target="_blank">
+                                <img src="img/project_restaurant/Restaurant 8 Dish Create.webp" alt="Dish Create">
+                              </a>
+                            
+                            <figcaption>Dish Create</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_restaurant/Restaurant 9 Cook Create.webp" target="_blank">
+                                <img src="img/project_restaurant/Restaurant 9 Cook Create.webp" alt="Cook Create">
+                              </a>
+                            
+                            <figcaption>Cook Create</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="img/project_restaurant/Restaurant 12 Logout.webp" target="_blank">
+                                <img src="img/project_restaurant/Restaurant 12 Logout.webp" alt="Logout Page">
+                              </a>
+                            
+                            <figcaption>Logout Page</figcaption>
+                          </figure>
+                        
+                      </div>
+                      <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
                     </div>
                   
                 </section>
@@ -454,7 +572,7 @@
                   </li>
                 
                   <li>
-                    <h3>Nginx / WebSockets</h3>
+                    <h3>Nginx / WebSocket</h3>
                   </li>
                 
                   <li>
@@ -470,15 +588,15 @@
                   </li>
                 
                   <li>
-                    <h3>AWS (IAM, EC2, Lambda, ECS, ECR, S3, RDS)</h3>
+                    <h3>AWS (IAM, EC2, ECS, ECR, S3, RDS)</h3>
                   </li>
                 
                   <li>
-                    <h3>Git / GitHub</h3>
+                    <h3>Git / GitHub / GitHub Actions</h3>
                   </li>
                 
                   <li>
-                    <h3>Docker / Linux / CI/CD / GitHub Actions</h3>
+                    <h3>Docker / Linux / CI/CD</h3>
                   </li>
                 
                   <li>

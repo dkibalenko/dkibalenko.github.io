@@ -139,7 +139,21 @@
                   <p>A production-grade backend for an online cinema platform built with FastAPI, async SQLAlchemy, PostgreSQL, Redis, and Celery. The system implements a complete authentication and authorization flow, real-time features, background task processing, and a clean modular structure designed for scalability and maintainability</p>
                   
                     <ul>
-                      <li>Asynchronous backend built with FastAPI, PostgreSQL, async SQLAlchemy, Redis, Celery &amp; Nginx</li><li>Authentication system with JWT, refresh tokens, account activation, &amp; secure password handling</li><li>Role-based access control with User / Moderator / Admin permissions and protected routes.</li><li>Background task pipeline using Celery for email notifications and account lifecycle events</li><li>Real-time features powered by WebSockets (live comments, notifications, chat)</li><li>Clean, layered project structure with repositories, services, and strict Pydantic validation.</li><li>Movie catalog with ratings, likes, favorites, comments, and user profile management</li><li>Redis-powered caching for fast, consistent movie catalog responses (user-specific keys &amp; event-driven invalidation)</li><li>Comprehensive integration test suite using pytest-asyncio and isolated PostgreSQL test databases</li><li>Automated CI pipeline with Ruff, Mypy, Pytest, and coverage reporting to enforce code quality and maintain deterministic builds</li><li>Pre-commit workflow ensuring consistent formatting, linting, typing, and test execution before every commit</li><li>Strict typing across the entire codebase with mypy and Pydantic v2 for predictable, maintainable behavior</li><li>Nginx reverse proxy for handling HTTPS, routing, caching, and WebSocket upgrades</li>
+                      <li>Async FastAPI backend with PostgreSQL (async SQLAlchemy), Redis, Celery, and Nginx</li><li>JWT auth with refresh tokens, account activation, and password reset; role-based access control (User / Moderator / Admin)</li><li>Real-time WebSockets for live comments, notifications, and chat</li><li>Celery background task pipeline for email notifications and account lifecycle events</li><li>Movie catalog with ratings, likes, favorites, comments, and user profile management</li><li>Redis caching with user-specific keys and event-driven invalidation for consistent catalog responses</li><li>S3‑compatible object storage for user avatars and media</li><li>Integration test suite with pytest-asyncio on isolated PostgreSQL databases</li><li>CI pipeline with Ruff, Mypy, Pytest, and coverage; pre-commit hooks enforcing formatting, linting, and typing</li><li>Nginx reverse proxy for HTTPS, routing, WebSocket upgrades, and caching</li>
+                    </ul>
+                  
+                </section>
+              
+                <section>
+                  <h3>
+                    
+                      <a href="https://github.com/dkibalenko/SPA-comments">Real-Time Nested Comments System</a>
+                    
+                  </h3>
+                  <p>A full-stack SPA delivering live comment threads with file attachments, async email notifications, and sub-second WebSocket updates — containerised and deployed to production on a VPS.</p>
+                  
+                    <ul>
+                      <li>Nested comment threads with recursive tree rendering and live reply-count updates</li><li>Real-time broadcasting via Django Channels + Redis pub/sub (WebSocket push to all connected clients)</li><li>Asynchronous email notifications via Celery, decoupled through Django signals (Observer pattern)</li><li>File attachment support (images resized server-side, text files validated) with atomic rollback on upload failure</li><li>Server-side HTML sanitisation (allowed-tag allowlist) and captcha validation on every submission</li><li>Response caching with per-ordering/page cache keys and cache invalidation on new comments</li><li>Dockerised stack (PostgreSQL, Redis, Daphne, Celery, Nginx) with separate dev and production compose files</li><li>GitHub Actions CI/CD pipeline — automated linting, tests, and deployment to production VPS on every push</li><li>Full test suite: pytest-django integration tests with real DB, factory fixtures, and cache/transaction boundary coverage</li>
                     </ul>
                   
                 </section>
@@ -153,7 +167,7 @@
                   <p>An API service for theatre management built with Django REST Framework, supporting shows, performances, bookings, and user roles.</p>
                   
                     <ul>
-                      <li>Built a fully authenticated REST API using JWT tokens, custom email-based login, and role-based access control</li><li>Designed a relational data model with complex FK/M2M relationships, validation rules, and database-level constraints to ensure data integrity (e.g., unique seat reservations per performance)</li><li>Implemented advanced business logic including automatic seat availability calculation, multi-layer ticket validation, and user-bound reservation creation</li><li>Developed a scalable API layer with DRF ViewSets, nested serializers, and optimized queries using select_related / prefetch_related to eliminate N+1 issues</li><li>Containerized the entire environment with Docker + Postgres + PgAdmin</li><li>Added JWT token blacklisting with automated cleanup via Celery, Celery Beat, Redis</li>
+                      <li>REST API with JWT auth, custom email-based login, and role-based access control (Django REST Framework)</li><li>Relational data model with FK/M2M relationships, validation rules, and DB constraints (e.g., unique seat reservations per performance)</li><li>Business logic for automatic seat availability calculation, multi-layer ticket validation, and user-bound reservation creation</li><li>DRF ViewSets and nested serializers with select_related / prefetch_related to eliminate N+1 queries</li><li>Dockerised environment with PostgreSQL and PgAdmin</li><li>JWT token blacklisting with automated Celery Beat cleanup via Redis</li>
                     </ul>
                   
                 </section>
@@ -167,7 +181,7 @@
                   <p>A Django-based backend system representing a restaurant kitchen workflow, including staff management, dish preparation, and cook assignment to dishes.</p>
                   
                     <ul>
-                      <li>Built a Django application with a custom user model and automatic slug generation for clean URLs</li><li>Implemented CRUD workflows for dishes, ingredients, dish types, and cooks, including image uploads and validation</li><li>Designed a dynamic assignment system allowing cooks to be added/removed from dishes via a toggle action.</li><li>Added search, filtering, and pagination across all major list views for efficient data navigation.</li><li>Enhanced UX with custom middleware, optimized queries using prefetch_related, and persistent query parameters</li>
+                      <li>Django app with a custom user model and automatic slug generation for clean URLs</li><li>Full CRUD for dishes, dish types, ingredients, and cooks — with image upload and input validation</li><li>Dynamic cook-to-dish assignment via a toggle action (add/remove without a dedicated form)</li><li>Search, filtering, and pagination across all major list views</li><li>Custom middleware, prefetch_related query optimization, and persistent query parameters</li>
                     </ul>
                   
                 </section>

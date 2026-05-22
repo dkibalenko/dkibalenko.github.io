@@ -148,6 +148,9 @@
                     {% else %}
                       {{ project.title }}
                     {% endif %}
+                    {% if project.demo_url %}
+                      <a href="{{ project.demo_url }}" target="_blank" rel="noopener" class="demo-badge">Live ↗</a>
+                    {% endif %}
                   </h3>
                   {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
                   {% if project.highlights %}
@@ -155,16 +158,27 @@
                       {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
                     </ul>
                   {% endif %}
-                  {% if project.images %}
-                    <div class="gallery main-gallery">
-                      {% for img in project.images %}
-                        <figure>
-                          <a href="{{ img.img_path }}" target="_blank">
-                            <img width="600" height="338" src="{{ img.img_path }}" alt="{{ img.caption }}">
-                          </a>
-                          <figcaption>{{ img.caption }}</figcaption>
-                        </figure>
-                      {% endfor %}
+                  {% if project.media %}
+                    <div class="carousel" data-carousel>
+                      <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+                      <div class="carousel-track">
+                        {% for item in project.media %}
+                          <figure class="carousel-slide">
+                            {% if item.type == "image" %}
+                              <a href="{{ item.src }}" target="_blank">
+                                <img src="{{ item.src }}" alt="{{ item.caption }}">
+                              </a>
+                            {% else %}
+                              <a href="{{ item.watch_url }}" target="_blank" rel="noopener" class="video-thumb">
+                                <img src="{{ item.thumbnail }}" alt="{{ item.caption }}">
+                                <span class="play-btn" aria-hidden="true"></span>
+                              </a>
+                            {% endif %}
+                            <figcaption>{{ item.caption }}</figcaption>
+                          </figure>
+                        {% endfor %}
+                      </div>
+                      <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
                     </div>
                   {% endif %}
                 </section>

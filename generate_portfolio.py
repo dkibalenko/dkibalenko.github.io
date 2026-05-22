@@ -1,4 +1,5 @@
 import json
+import re
 from datetime import UTC, datetime
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
@@ -16,6 +17,23 @@ if isinstance(data["contact"].get("phone"), str):
     data["contact"]["phone_list"] = phones
 else:
     data["contact"]["phone_list"] = data["contact"]["phone"]
+
+# Build unified media list per project (images first, then videos)
+for project in data.get("projects", []):
+    media = []
+    for img in project.get("images", []):
+        media.append({"type": "image", "src": img["img_path"], "caption": img["caption"]})
+    for vid in project.get("videos", []):
+        match = re.search(r'(?:embed/|[?&]v=)([a-zA-Z0-9_-]{11})', vid["url"])
+        if match:
+            vid_id = match.group(1)
+            media.append({
+                "type": "video",
+                "thumbnail": f"https://img.youtube.com/vi/{vid_id}/hqdefault.jpg",
+                "watch_url": f"https://www.youtube.com/watch?v={vid_id}",
+                "caption": vid["caption"],
+            })
+    project["media"] = media
 
 # Load SVG icons
 if "social_links" in data:

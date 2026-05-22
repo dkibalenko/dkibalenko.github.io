@@ -60,30 +60,49 @@
       "summary": "A production-grade backend for an online cinema platform built with FastAPI, async SQLAlchemy, PostgreSQL, Redis, and Celery. The system implements a complete authentication and authorization flow, real-time features, background task processing, and a clean modular structure designed for scalability and maintainability",
       "url": "https://github.com/dkibalenko/online-cinema-fastapi/tree/dev",
       "highlights": [
-        "Asynchronous backend built with FastAPI, PostgreSQL, async SQLAlchemy, Redis, Celery & Nginx",
-        "Authentication system with JWT, refresh tokens, account activation, & secure password handling",
-        "Role-based access control with User / Moderator / Admin permissions and protected routes.",
-        "Background task pipeline using Celery for email notifications and account lifecycle events",
-        "Real-time features powered by WebSockets (live comments, notifications, chat)",
-        "Clean, layered project structure with repositories, services, and strict Pydantic validation.",
+        "Async FastAPI backend with PostgreSQL (async SQLAlchemy), Redis, Celery, and Nginx",
+        "JWT auth with refresh tokens, account activation, and password reset; role-based access control (User / Moderator / Admin)",
+        "Real-time WebSockets for live comments, notifications, and chat",
+        "Celery background task pipeline for email notifications and account lifecycle events",
         "Movie catalog with ratings, likes, favorites, comments, and user profile management",
-        "Redis-powered caching for fast, consistent movie catalog responses (user-specific keys & event-driven invalidation)",
-        "Comprehensive integration test suite using pytest-asyncio and isolated PostgreSQL test databases",
-        "Automated CI pipeline with Ruff, Mypy, Pytest, and coverage reporting to enforce code quality and maintain deterministic builds",
-        "Pre-commit workflow ensuring consistent formatting, linting, typing, and test execution before every commit",
-        "Strict typing across the entire codebase with mypy and Pydantic v2 for predictable, maintainable behavior",
-        "Nginx reverse proxy for handling HTTPS, routing, caching, and WebSocket upgrades"
+        "Redis caching with user-specific keys and event-driven invalidation for consistent catalog responses",
+        "S3‑compatible object storage for user avatars and media",
+        "Integration test suite with pytest-asyncio on isolated PostgreSQL databases",
+        "CI pipeline with Ruff, Mypy, Pytest, and coverage; pre-commit hooks enforcing formatting, linting, and typing",
+        "Nginx reverse proxy for HTTPS, routing, WebSocket upgrades, and caching"
       ],
       "images": [
-        {"img_path": "img/project_cinema/CI-Cinema.webp", "caption": "CI Pipeline"},
-        {"img_path": "img/project_cinema/Locust Test1.webp", "caption": "Locust Load Testing"},
-        {"img_path": "img/project_cinema/Locust Test2.webp", "caption": "Locust Load Charts"},
         {"img_path": "img/project_cinema/Cinema 1 Auth.webp", "caption": "API Auth"},
         {"img_path": "img/project_cinema/Cinema 2 API.webp", "caption": "API Users"},
         {"img_path": "img/project_cinema/Cinema 3 API.webp", "caption": "API Movies"},
-        {"img_path": "img/project_cinema/Cinema PgAdmin.webp", "caption": "PgAdmin"},
+        {"img_path": "img/project_cinema/Cinema MinIO.webp", "caption": "MinIO"},
         {"img_path": "img/project_cinema/Cinema MailHog.webp", "caption": "MailHog"},
-        {"img_path": "img/project_cinema/Cinema MinIO.webp", "caption": "MinIO"}
+        {"img_path": "img/project_cinema/Cinema PgAdmin.webp", "caption": "PgAdmin"},
+        {"img_path": "img/project_cinema/Locust Test1.webp", "caption": "Locust Load Testing"},
+        {"img_path": "img/project_cinema/Locust Test2.webp", "caption": "Locust Test Charts"},
+        {"img_path": "img/project_cinema/CI-Cinema.webp", "caption": "CI Pipeline"}
+      ]
+    },
+    {
+      "title": "Real-Time Nested Comments System",
+      "summary": "A full-stack SPA delivering live comment threads with file attachments, async email notifications, and sub-second WebSocket updates — containerised and deployed to production on a VPS.",
+      "url": "https://github.com/dkibalenko/SPA-comments",
+      "demo_url": "https://spa.meizuno.com/",
+      "highlights": [
+        "Nested comment threads with recursive tree rendering and live reply-count updates",
+        "Real-time broadcasting via Django Channels + Redis pub/sub (WebSocket push to all connected clients)",
+        "Asynchronous email notifications via Celery, decoupled through Django signals (Observer pattern)",
+        "File attachment support (images resized server-side, text files validated) with atomic rollback on upload failure",
+        "Server-side HTML sanitisation (allowed-tag allowlist) and captcha validation on every submission",
+        "Response caching with per-ordering/page cache keys and cache invalidation on new comments",
+        "Dockerised stack (PostgreSQL, Redis, Daphne, Celery, Nginx) with separate dev and production compose files",
+        "GitHub Actions CI/CD pipeline — automated linting, tests, and deployment to production VPS on every push",
+        "Full test suite: pytest-django integration tests with real DB, factory fixtures, and cache/transaction boundary coverage"
+      ],
+      "images": [],
+      "videos": [
+        {"url": "https://www.youtube.com/embed/9wC8a-C89hY", "caption": "Comments Demo"},
+        {"url": "https://www.youtube.com/embed/Z8BCQjOLAWA", "caption": "Load Testing (Locust)"}
       ]
     },
     {
@@ -91,20 +110,21 @@
       "summary": "An API service for theatre management built with Django REST Framework, supporting shows, performances, bookings, and user roles.",
       "url": "https://github.com/dkibalenko/theatre-api-service-mate/tree/main",
       "highlights": [
-        "Built a fully authenticated REST API using JWT tokens, custom email-based login, and role-based access control",
-        "Designed a relational data model with complex FK/M2M relationships, validation rules, and database-level constraints to ensure data integrity (e.g., unique seat reservations per performance)",
-        "Implemented advanced business logic including automatic seat availability calculation, multi-layer ticket validation, and user-bound reservation creation",
-        "Developed a scalable API layer with DRF ViewSets, nested serializers, and optimized queries using select_related / prefetch_related to eliminate N+1 issues",
-        "Containerized the entire environment with Docker + Postgres + PgAdmin",
-        "Added JWT token blacklisting with automated cleanup via Celery, Celery Beat, Redis"
+        "REST API with JWT auth, custom email-based login, and role-based access control (Django REST Framework)",
+        "Relational data model with FK/M2M relationships, validation rules, and DB constraints (e.g., unique seat reservations per performance)",
+        "Business logic for automatic seat availability calculation, multi-layer ticket validation, and user-bound reservation creation",
+        "DRF ViewSets and nested serializers with select_related / prefetch_related to eliminate N+1 queries",
+        "Dockerised environment with PostgreSQL and PgAdmin",
+        "JWT token blacklisting with automated Celery Beat cleanup via Redis"
       ],
       "images": [
-        {"img_path": "img/project_theatre/Theatre 1 Celery Run.webp", "caption": "Celery Run"},
-        {"img_path": "img/project_theatre/Theatre 2 PgAdmin.webp", "caption": "PgAdmin"},
-        {"img_path": "img/project_theatre/Theatre 3 API.webp", "caption": "API Theatre"},
         {"img_path": "img/project_theatre/Theatre 4 API.webp", "caption": "API User"},
+        {"img_path": "img/project_theatre/Theatre 3 API.webp", "caption": "API Theatre"},
+        {"img_path": "img/project_theatre/Theatre 7 API Actor list.webp", "caption": "API Actor List"},
         {"img_path": "img/project_theatre/Theatre 5 API Login.webp", "caption": "API Login"},
-        {"img_path": "img/project_theatre/Theatre 7 API Actor list.webp", "caption": "API Actor List"}
+        {"img_path": "img/project_theatre/Theatre 6 API Login Token.webp", "caption": "API Login Token"},
+        {"img_path": "img/project_theatre/Theatre 1 Celery Run.webp", "caption": "Celery Tasks"},
+        {"img_path": "img/project_theatre/Theatre 2 PgAdmin.webp", "caption": "PgAdmin"}
       ]
     },
     {
@@ -112,11 +132,11 @@
       "summary": "A Django-based backend system representing a restaurant kitchen workflow, including staff management, dish preparation, and cook assignment to dishes.",
       "url": "https://github.com/dkibalenko/restaurant-mate",
       "highlights": [
-        "Built a Django application with a custom user model and automatic slug generation for clean URLs",
-        "Implemented CRUD workflows for dishes, ingredients, dish types, and cooks, including image uploads and validation",
-        "Designed a dynamic assignment system allowing cooks to be added/removed from dishes via a toggle action.",
-        "Added search, filtering, and pagination across all major list views for efficient data navigation.",
-        "Enhanced UX with custom middleware, optimized queries using prefetch_related, and persistent query parameters"
+        "Django app with a custom user model and automatic slug generation for clean URLs",
+        "Full CRUD for dishes, dish types, ingredients, and cooks — with image upload and input validation",
+        "Dynamic cook-to-dish assignment via a toggle action (add/remove without a dedicated form)",
+        "Search, filtering, and pagination across all major list views",
+        "Custom middleware, prefetch_related query optimization, and persistent query parameters"
       ],
       "images": [
         {"img_path": "img/project_restaurant/Restaurant 1 Login.webp", "caption": "Login Page"},
@@ -153,13 +173,13 @@
       { "name": "Django / Django REST / Django ORM" },
       { "name": "FastAPI / Pydantic / SQLAlchemy" },
       { "name": "SQL / PostgreSQL / Query Optimization" },
-      { "name": "Nginx / WebSockets" },
+      { "name": "Nginx / WebSocket" },
       { "name": "Redis / Celery" },
       { "name": "Pytest / Pytest-Asyncio" },
       { "name": "Postman / Locust" },
-      { "name": "AWS (IAM, EC2, Lambda, ECS, ECR, S3, RDS)" },
-      { "name": "Git / GitHub" },
-      { "name": "Docker / Linux / CI/CD / GitHub Actions" },
+      { "name": "AWS (IAM, EC2, ECS, ECR, S3, RDS)" },
+      { "name": "Git / GitHub / GitHub Actions" },
+      { "name": "Docker / Linux / CI/CD" },
       { "name": "Algorithms & Data Structures" }
     ],
 
