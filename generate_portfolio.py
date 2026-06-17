@@ -18,11 +18,9 @@ if isinstance(data["contact"].get("phone"), str):
 else:
     data["contact"]["phone_list"] = data["contact"]["phone"]
 
-# Build unified media list per project (images first, then videos)
+# Build unified media list per project (videos first, then images)
 for project in data.get("projects", []):
     media = []
-    for img in project.get("images", []):
-        media.append({"type": "image", "src": img["img_path"], "caption": img["caption"]})
     for vid in project.get("videos", []):
         match = re.search(r'(?:embed/|[?&]v=)([a-zA-Z0-9_-]{11})', vid["url"])
         if match:
@@ -33,6 +31,8 @@ for project in data.get("projects", []):
                 "watch_url": f"https://www.youtube.com/watch?v={vid_id}",
                 "caption": vid["caption"],
             })
+    for img in project.get("images", []):
+        media.append({"type": "image", "src": img["img_path"], "caption": img["caption"]})
     project["media"] = media
 
 # Load SVG icons
