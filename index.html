@@ -205,7 +205,7 @@
                   <p>A production-grade backend for an online cinema platform built with FastAPI, async SQLAlchemy, PostgreSQL, Redis, and Celery. The system implements a complete authentication and authorization flow, real-time features, background task processing, and a clean modular structure designed for scalability and maintainability</p>
                   
                     <ul>
-                      <li>Async FastAPI backend with PostgreSQL (async SQLAlchemy), Redis, Celery, and Nginx</li><li>JWT auth with refresh tokens, account activation, and password reset; role-based access control (User / Moderator / Admin)</li><li>Real-time WebSockets for live comments, notifications, and chat</li><li>Celery background task pipeline for email notifications and account lifecycle events</li><li>Movie catalog with ratings, likes, favorites, comments, and user profile management</li><li>Redis caching with user-specific keys and event-driven invalidation for consistent catalog responses</li><li>S3‑compatible object storage for user avatars and media</li><li>Integration test suite with pytest-asyncio on isolated PostgreSQL databases</li><li>CI pipeline with Ruff, Mypy, Pytest, and coverage; pre-commit hooks enforcing formatting, linting, and typing</li><li>Nginx reverse proxy for HTTPS, routing, WebSocket upgrades, and caching</li>
+                      <li>Async FastAPI backend with PostgreSQL (async SQLAlchemy), Redis, Celery, and Nginx</li><li>JWT auth with refresh tokens, account activation, and password reset; role-based access control (User / Moderator / Admin)</li><li>Real-time WebSockets for live comments, notifications, and chat</li><li>Celery background task pipeline for email notifications and account lifecycle events</li><li>Movie catalog with ratings, likes, favorites, comments, and user profile management</li><li>Redis caching with user-specific keys and event-driven invalidation for consistent catalog responses</li><li>S3‑compatible object storage for user avatars and media</li><li>HLS video streaming pipeline — FFmpeg transcoding to 360p/720p adaptive-bitrate variants, stored in MinIO and played back via any HLS-capable browser</li><li>Integration test suite with pytest-asyncio on isolated PostgreSQL databases</li><li>CI pipeline with Ruff, Mypy, Pytest, and coverage; pre-commit hooks enforcing formatting, linting, and typing</li><li>Nginx reverse proxy for HTTPS, routing, WebSocket upgrades, and caching</li>
                     </ul>
                   
                   
@@ -269,29 +269,31 @@
                         
                           <figure class="carousel-slide">
                             
-                              <a href="img/project_cinema/Locust Test1.webp" target="_blank">
-                                <img src="img/project_cinema/Locust Test1.webp" alt="Locust Load Testing">
-                              </a>
-                            
-                            <figcaption>Locust Load Testing</figcaption>
-                          </figure>
-                        
-                          <figure class="carousel-slide">
-                            
-                              <a href="img/project_cinema/Locust Test2.webp" target="_blank">
-                                <img src="img/project_cinema/Locust Test2.webp" alt="Locust Test Charts">
-                              </a>
-                            
-                            <figcaption>Locust Test Charts</figcaption>
-                          </figure>
-                        
-                          <figure class="carousel-slide">
-                            
                               <a href="img/project_cinema/CI-Cinema.webp" target="_blank">
                                 <img src="img/project_cinema/CI-Cinema.webp" alt="CI Pipeline">
                               </a>
                             
                             <figcaption>CI Pipeline</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="https://www.youtube.com/watch?v=y59jlSmeKQQ" target="_blank" rel="noopener" class="video-thumb">
+                                <img src="https://img.youtube.com/vi/y59jlSmeKQQ/hqdefault.jpg" alt="HLS Video Streaming">
+                                <span class="play-btn" aria-hidden="true"></span>
+                              </a>
+                            
+                            <figcaption>HLS Video Streaming</figcaption>
+                          </figure>
+                        
+                          <figure class="carousel-slide">
+                            
+                              <a href="https://www.youtube.com/watch?v=-01bDbUgVlo" target="_blank" rel="noopener" class="video-thumb">
+                                <img src="https://img.youtube.com/vi/-01bDbUgVlo/hqdefault.jpg" alt="Load Test (500 users, Locust)">
+                                <span class="play-btn" aria-hidden="true"></span>
+                              </a>
+                            
+                            <figcaption>Load Test (500 users, Locust)</figcaption>
                           </figure>
                         
                       </div>

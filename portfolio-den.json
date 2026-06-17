@@ -67,6 +67,7 @@
         "Movie catalog with ratings, likes, favorites, comments, and user profile management",
         "Redis caching with user-specific keys and event-driven invalidation for consistent catalog responses",
         "S3‑compatible object storage for user avatars and media",
+        "HLS video streaming pipeline — FFmpeg transcoding to 360p/720p adaptive-bitrate variants, stored in MinIO and played back via any HLS-capable browser",
         "Integration test suite with pytest-asyncio on isolated PostgreSQL databases",
         "CI pipeline with Ruff, Mypy, Pytest, and coverage; pre-commit hooks enforcing formatting, linting, and typing",
         "Nginx reverse proxy for HTTPS, routing, WebSocket upgrades, and caching"
@@ -78,9 +79,11 @@
         {"img_path": "img/project_cinema/Cinema MinIO.webp", "caption": "MinIO"},
         {"img_path": "img/project_cinema/Cinema MailHog.webp", "caption": "MailHog"},
         {"img_path": "img/project_cinema/Cinema PgAdmin.webp", "caption": "PgAdmin"},
-        {"img_path": "img/project_cinema/Locust Test1.webp", "caption": "Locust Load Testing"},
-        {"img_path": "img/project_cinema/Locust Test2.webp", "caption": "Locust Test Charts"},
         {"img_path": "img/project_cinema/CI-Cinema.webp", "caption": "CI Pipeline"}
+      ],
+      "videos": [
+        {"url": "https://www.youtube.com/embed/y59jlSmeKQQ", "caption": "HLS Video Streaming"},
+        {"url": "https://www.youtube.com/embed/-01bDbUgVlo", "caption": "Load Test (500 users, Locust)"}
       ]
     },
     {
