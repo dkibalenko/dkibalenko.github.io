@@ -36,8 +36,8 @@
       "company": "Freelance Python Developer",
       "position": "Freelance Python Developer",
       "url": "",
-      "start_date": "03/2025",
-      "end_date": "03/2026",
+      "start_date": "06/2025",
+      "end_date": "06/2026",
       "summary": "Built a multi-tenant influencer CRM backend with Django REST Framework, ensuring strict tenant isolation and secure ownership boundaries. Integrated an external tracking engine via a custom Python client and delivered optimized analytics with performant SQL patterns. Designed relational data models and containerized the platform with Docker for reproducible development.",
       "highlights": [
       ]
