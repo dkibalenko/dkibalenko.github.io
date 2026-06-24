@@ -33,8 +33,8 @@
 
   "work_experience": [
     {
-      "company": "Freelance Python Developer",
-      "position": "Freelance Python Developer",
+      "company": "FREELANCE PYTHON DEVELOPER",
+      "position": "FREELANCE PYTHON DEVELOPER",
       "url": "",
       "start_date": "06/2025",
       "end_date": "06/2026",
@@ -43,12 +43,12 @@
       ]
     },
     {
-      "company": "Python Developer",
-      "position": "Python Developer",
+      "company": "PYTHON DEVELOPER",
+      "position": "PYTHON DEVELOPER - TRAINING & PORTFOLIO PROJECTS",
       "url": "",
       "start_date": "12/2023",
       "end_date": "03/2025",
-      "summary": "Developed production-grade backend systems and REST APIs using Django, FastAPI, and PostgreSQL. Designed clean, maintainable service-repository layers following SOLID principles. Implemented robust authentication flows, optimized SQL performance, and scalable async processing. Delivered containerized, cloud-ready solutions using Docker, GitHub Actions, and deployments on VPS.",
+      "summary": "Mate Academy professional Python developer programme with parallel independent backend projects. Built an asynchronous FastAPI backend with a clean layered project structure, robust custom authentication system with JWT, refresh tokens, account activation, & secure password handling, Role-based Access Control. Implemented background task pipeline using Celery for email notifications and account lifecycle events. HLS video streaming pipeline - FFmpeg transcoding to 360p/720p adaptive-bitrate variants. Containerized applications with Docker, built CI/CD pipelines & deployed applications on Render & AWS.",
       "highlights": [
       ]
     }
