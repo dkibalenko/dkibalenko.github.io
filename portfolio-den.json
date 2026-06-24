@@ -1,6 +1,6 @@
 {
   "name": "Denys Kibalenko",
-  "label": "Python Backend Developer for Scalable Systems",
+  "label": "Python Backend Developer",
   "image_path": "",
 
   "contact": {
@@ -9,7 +9,7 @@
     "location": "Prague, Czechia / Remote"
   },
 
-  "summary": "Backend developer for building production-ready systems with FastAPI, Django, PostgreSQL, Redis, and Celery. Skilled in designing scalable REST APIs, async architectures, and multi-service Docker environments. Strong foundation in OOP, SOLID, concurrency, and database optimization. Experienced with AWS, Linux, CI/CD pipelines, and strict code-quality workflows. Former maritime chief officer with 13 years of international crew leadership — brings operational discipline, safety-critical decision-making, and cross-cultural collaboration to software engineering.",
+  "summary": "Backend developer for building production-ready systems with FastAPI, Django, PostgreSQL, Redis, and Celery. Skilled in designing scalable REST APIs, async architectures, and multi-service Docker environments. Strong foundation in OOP, SOLID, concurrency, and database optimization. Experienced with AWS, Linux, CI/CD pipelines, and strict code-quality workflows. Former maritime Chief Officer with 13 years of crew leadership in international companies - brings operational discipline, required precision, full ownership of decisions, and cross-cultural collaboration to software engineering.",
 
   "base_url": "127.0.0.1:5500",
 
@@ -48,7 +48,7 @@
       "url": "",
       "start_date": "12/2023",
       "end_date": "03/2025",
-      "summary": "Developed production-grade backend systems and REST APIs using Django, FastAPI, and PostgreSQL. Designed clean, maintainable service-repository layers following SOLID principles. Implemented robust authentication flows, optimized SQL performance, and scalable async processing. Delivered containerized, cloud-ready solutions using Docker, GitHub Actions, and deployments on Render and AWS (EC2, IAM, S3, RDS).",
+      "summary": "Developed production-grade backend systems and REST APIs using Django, FastAPI, and PostgreSQL. Designed clean, maintainable service-repository layers following SOLID principles. Implemented robust authentication flows, optimized SQL performance, and scalable async processing. Delivered containerized, cloud-ready solutions using Docker, GitHub Actions, and deployments on VPS.",
       "highlights": [
       ]
     }
@@ -56,7 +56,7 @@
 
   "projects": [
     {
-      "title": "Online Cinema Platform — FastAPI, Async Architecture, RBAC, Celery, WebSockets",
+      "title": "Online Cinema Platform - FastAPI, Async Architecture, RBAC, Celery, WebSockets",
       "summary": "A production-grade backend for an online cinema platform built with FastAPI, async SQLAlchemy, PostgreSQL, Redis, and Celery. The system implements a complete authentication and authorization flow, real-time features, background task processing, and a clean modular structure designed for scalability and maintainability",
       "url": "https://github.com/dkibalenko/online-cinema-fastapi/tree/dev",
       "highlights": [
@@ -67,7 +67,7 @@
         "Movie catalog with ratings, likes, favorites, comments, and user profile management",
         "Redis caching with user-specific keys and event-driven invalidation for consistent catalog responses",
         "S3‑compatible object storage for user avatars and media",
-        "HLS video streaming pipeline — FFmpeg transcoding to 360p/720p adaptive-bitrate variants, stored in MinIO and played back via any HLS-capable browser",
+        "HLS video streaming pipeline - FFmpeg transcoding to 360p/720p adaptive-bitrate variants, stored in MinIO and played back via any HLS-capable browser",
         "Integration test suite with pytest-asyncio on isolated PostgreSQL databases",
         "CI pipeline with Ruff, Mypy, Pytest, and coverage; pre-commit hooks enforcing formatting, linting, and typing",
         "Nginx reverse proxy for HTTPS, routing, WebSocket upgrades, and caching"
@@ -88,7 +88,7 @@
     },
     {
       "title": "Real-Time Nested Comments System",
-      "summary": "A full-stack SPA delivering live comment threads with file attachments, async email notifications, and sub-second WebSocket updates — containerised and deployed to production on a VPS.",
+      "summary": "A full-stack SPA delivering live comment threads with file attachments, async email notifications, and sub-second WebSocket updates - containerised and deployed to production on a VPS.",
       "url": "https://github.com/dkibalenko/SPA-comments",
       "demo_url": "https://spa.meizuno.com/",
       "highlights": [
@@ -99,7 +99,7 @@
         "Server-side HTML sanitisation (allowed-tag allowlist) and captcha validation on every submission",
         "Response caching with per-ordering/page cache keys and cache invalidation on new comments",
         "Dockerised stack (PostgreSQL, Redis, Daphne, Celery, Nginx) with separate dev and production compose files",
-        "GitHub Actions CI/CD pipeline — automated linting, tests, and deployment to production VPS on every push",
+        "GitHub Actions CI/CD pipeline - automated linting, tests, and deployment to production VPS on every push",
         "Full test suite: pytest-django integration tests with real DB, factory fixtures, and cache/transaction boundary coverage"
       ],
       "images": [],
@@ -136,7 +136,7 @@
       "url": "https://github.com/dkibalenko/restaurant-mate",
       "highlights": [
         "Django app with a custom user model and automatic slug generation for clean URLs",
-        "Full CRUD for dishes, dish types, ingredients, and cooks — with image upload and input validation",
+        "Full CRUD for dishes, dish types, ingredients, and cooks - with image upload and input validation",
         "Dynamic cook-to-dish assignment via a toggle action (add/remove without a dedicated form)",
         "Search, filtering, and pagination across all major list views",
         "Custom middleware, prefetch_related query optimization, and persistent query parameters"
