@@ -18,11 +18,13 @@
     <!-- Open Graph Tags: The URL of the page, used to ensure link previews resolve to the correct page. -->
     <meta property="og:url" content="{{ base_url }}/resume.html">
 
-    <!-- Open Graph Tags: URL of an image that represents the page. Useful for link previews. -->
-    <meta property="og:image" content="{{ base_url }}/{{ image_path }}">
+    {% if image_path %}
+      <!-- Open Graph Tags: URL of an image that represents the page. Useful for link previews. -->
+      <meta property="og:image" content="{{ base_url }}/{{ image_path }}">
 
-    <!-- Open Graph Tags: Provides an alternative text for the image to improve accessibility. -->
-    <meta property="og:image:alt" content="{{ name }} Profile Image">
+      <!-- Open Graph Tags: Provides an alternative text for the image to improve accessibility. -->
+      <meta property="og:image:alt" content="{{ name }} Profile Image">
+    {% endif %}
 
     <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

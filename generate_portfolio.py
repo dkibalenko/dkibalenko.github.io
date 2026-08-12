@@ -19,7 +19,7 @@ else:
     data["contact"]["phone_list"] = data["contact"]["phone"]
 
 # Build unified media list per project (videos first, then images)
-for project in data.get("projects", []):
+for project in data.get("projects", []) + data.get("quality_bi_projects", []):
     media = []
     for vid in project.get("videos", []):
         match = re.search(r'(?:embed/|[?&]v=)([a-zA-Z0-9_-]{11})', vid["url"])

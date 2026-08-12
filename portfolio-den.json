@@ -11,7 +11,7 @@
 
   "summary": "Backend developer for building production-ready systems with FastAPI, Django, PostgreSQL, Redis, and Celery. Skilled in designing scalable REST APIs, async architectures, and multi-service Docker environments. Strong foundation in OOP, SOLID, concurrency, and database optimization. Experienced with AWS, Linux, CI/CD pipelines, and strict code-quality workflows. Former maritime Chief Officer with 13 years of crew leadership in international companies - brings operational discipline, required precision, full ownership of decisions, and cross-cultural collaboration to software engineering.",
 
-  "base_url": "127.0.0.1:5500",
+  "base_url": "https://dkibalenko.github.io",
 
   "social_links": [
     {
@@ -51,6 +51,30 @@
       "summary": "Mate Academy professional Python developer programme with parallel independent backend projects. Built an asynchronous FastAPI backend with a clean layered project structure, robust custom authentication system with JWT, refresh tokens, account activation, & secure password handling, Role-based Access Control. Implemented background task pipeline using Celery for email notifications and account lifecycle events. HLS video streaming pipeline - FFmpeg transcoding to 360p/720p adaptive-bitrate variants. Containerized applications with Docker, built CI/CD pipelines & deployed applications on Render & AWS.",
       "highlights": [
       ]
+    }
+  ],
+
+  "quality_bi_projects": [
+    {
+      "title": "NCR Quality Dashboard — Excel & Power BI Proof of Concept",
+      "pdf_url": "assets/projects/ncr-quality-dashboard/NCR_Quality_Presentation.pdf",
+      "summary": "A mock ISM non-conformity tracking system built to demonstrate Excel and Power BI reporting skills for a Quality Engineer role: raw NCR data modeled in Excel, then rebuilt as an interactive Power BI report with cross-filtering visuals and a short data-driven presentation of findings.",
+      "highlights": [
+        "Excel: structured tables, XLOOKUP/FILTER-driven live CAPA tracker, native PivotTables",
+        "Power BI: clean single-table data model, Card/Bar/Donut visuals with automatic cross-filtering",
+        "Analysis: grouped six root-cause categories into three actionable clusters, flagged a monthly volume spike"
+      ],
+      "downloads": [
+        {"url": "assets/projects/ncr-quality-dashboard/NCR_Quality_Dashboard.xlsx", "label": "Excel workbook"},
+        {"url": "assets/projects/ncr-quality-dashboard/NCR_Quality_Dashboard_KPI.pdf", "label": "Power BI KPI export"},
+        {"url": "assets/projects/ncr-quality-dashboard/NCR_Quality_Presentation.pdf", "label": "Presentation deck"}
+      ],
+      "images": [
+        {"img_path": "img/project_ncr/NCR 1 KPI Summary.webp", "caption": "KPI Summary"},
+        {"img_path": "img/project_ncr/NCR 2 Trend Analysis.webp", "caption": "Trend Analysis"},
+        {"img_path": "img/project_ncr/NCR 3 Corrective Actions.webp", "caption": "Corrective Actions"}
+      ],
+      "videos": []
     }
   ],
 

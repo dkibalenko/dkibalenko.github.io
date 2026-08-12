@@ -1,3 +1,26 @@
+{% macro render_carousel(media) %}
+  <div class="carousel" data-carousel>
+    <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+    <div class="carousel-track">
+      {% for item in media %}
+        <figure class="carousel-slide">
+          {% if item.type == "image" %}
+            <a href="{{ item.src }}" target="_blank">
+              <img src="{{ item.src }}" alt="{{ item.caption }}">
+            </a>
+          {% else %}
+            <a href="{{ item.watch_url }}" target="_blank" rel="noopener" class="video-thumb">
+              <img src="{{ item.thumbnail }}" alt="{{ item.caption }}">
+              <span class="play-btn" aria-hidden="true"></span>
+            </a>
+          {% endif %}
+          <figcaption>{{ item.caption }}</figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+    <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+  </div>
+{% endmacro -%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,11 +41,13 @@
     <!-- Open Graph Tags: The URL of the page, used to ensure link previews resolve to the correct page. -->
     <meta property="og:url" content="{{ base_url }}/index.html">
 
-    <!-- Open Graph Tags: URL of an image that represents the page. Useful for link previews. -->
-    <meta property="og:image" content="{{ base_url }}/{{ image_path }}">
+    {% if image_path %}
+      <!-- Open Graph Tags: URL of an image that represents the page. Useful for link previews. -->
+      <meta property="og:image" content="{{ base_url }}/{{ image_path }}">
 
-    <!-- Open Graph Tags: Provides an alternative text for the image to improve accessibility. -->
-    <meta property="og:image:alt" content="{{ name }} Profile Image">
+      <!-- Open Graph Tags: Provides an alternative text for the image to improve accessibility. -->
+      <meta property="og:image:alt" content="{{ name }} Profile Image">
+    {% endif %}
 
     <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,6 +162,34 @@
             </section>
           {% endif %}
 
+          {% if quality_bi_projects %}
+            <section>
+              <h2 class="section-heading">Quality &amp; BI Projects</h2>
+              {% for project in quality_bi_projects %}
+                <section>
+                  <h3>
+                    <a href="{{ project.pdf_url }}" target="_blank">{{ project.title }}</a>
+                  </h3>
+                  {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+                  {% if project.highlights or project.downloads %}
+                    <ul>
+                      {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
+                      {% if project.downloads %}
+                        <li>
+                          Downloads:
+                          {% for dl in project.downloads %}
+                            <a href="{{ dl.url }}" target="_blank">{{ dl.label }}</a>{% if not loop.last %} &middot; {% endif %}
+                          {% endfor %}
+                        </li>
+                      {% endif %}
+                    </ul>
+                  {% endif %}
+                  {% if project.media %}{{ render_carousel(project.media) }}{% endif %}
+                </section>
+              {% endfor %}
+            </section>
+          {% endif %}
+
           {% if projects %}
             <section>
               <h2 class="section-heading">Projects</h2>
@@ -158,29 +211,7 @@
                       {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
                     </ul>
                   {% endif %}
-                  {% if project.media %}
-                    <div class="carousel" data-carousel>
-                      <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
-                      <div class="carousel-track">
-                        {% for item in project.media %}
-                          <figure class="carousel-slide">
-                            {% if item.type == "image" %}
-                              <a href="{{ item.src }}" target="_blank">
-                                <img src="{{ item.src }}" alt="{{ item.caption }}">
-                              </a>
-                            {% else %}
-                              <a href="{{ item.watch_url }}" target="_blank" rel="noopener" class="video-thumb">
-                                <img src="{{ item.thumbnail }}" alt="{{ item.caption }}">
-                                <span class="play-btn" aria-hidden="true"></span>
-                              </a>
-                            {% endif %}
-                            <figcaption>{{ item.caption }}</figcaption>
-                          </figure>
-                        {% endfor %}
-                      </div>
-                      <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
-                    </div>
-                  {% endif %}
+                  {% if project.media %}{{ render_carousel(project.media) }}{% endif %}
                 </section>
               {% endfor %}
             </section>
