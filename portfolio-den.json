@@ -1,6 +1,6 @@
 {
   "name": "Denys Kibalenko",
-  "label": "Python Backend Developer",
+  "label": "Technical Professional - Quality Systems · Data Analysis · Python",
   "image_path": "",
 
   "contact": {
@@ -56,7 +56,7 @@
 
   "quality_bi_projects": [
     {
-      "title": "NCR Quality Dashboard — Excel & Power BI Proof of Concept",
+      "title": "NCR Quality Dashboard - Excel & Power BI Proof of Concept",
       "pdf_url": "assets/projects/ncr-quality-dashboard/NCR_Quality_Presentation.pdf",
       "summary": "A mock ISM non-conformity tracking system built to demonstrate Excel and Power BI reporting skills for a Quality Engineer role: raw NCR data modeled in Excel, then rebuilt as an interactive Power BI report with cross-filtering visuals and a short data-driven presentation of findings.",
       "highlights": [
