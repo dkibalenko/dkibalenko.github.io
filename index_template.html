@@ -168,7 +168,7 @@
               {% for project in quality_bi_projects %}
                 <section>
                   <h3>
-                    <a href="{{ project.pdf_url }}" target="_blank">{{ project.title }}</a>
+                    <a href="{{ project.pdf_url }}" target="_blank" rel="noopener">{{ project.title }}</a>
                   </h3>
                   {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
                   {% if project.highlights or project.downloads %}
